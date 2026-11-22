@@ -1,0 +1,32 @@
+{
+ "settings": {
+  "stability": 0.5,
+  "similarity_boost": 0.8,
+  "style": 0.15,
+  "use_speaker_boost": true,
+  "speed": 0.95
+ },
+ "results": [
+  {
+   "name": "Otto - Casual and Normal",
+   "error": {
+    "_error": 402,
+    "_body": "{\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Free users cannot use library voices via the API. Please upgrade your subscription to use this voice.\",\"status\":\"payment_required\",\"request_id\":\"ab881a30d775fd57833855370e0556df\"}}"
+   }
+  },
+  {
+   "name": "Alexander - Deep TV Narrator",
+   "error": {
+    "_error": 402,
+    "_body": "{\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Free users cannot use library voices via the API. Please upgrade your subscription to use this voice.\",\"status\":\"payment_required\",\"request_id\":\"2ee24d505b58d1722311081415a76ea6\"}}"
+   }
+  },
+  {
+   "name": "Leon Stern - Rich and Deep",
+   "error": {
+    "_error": 402,
+    "_body": "{\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Free users cannot use library voices via the API. Please upgrade your subscription to use this voice.\",\"status\":\"payment_required\",\"request_id\":\"b3fd5f7b598704eca8901a75d059812d\"}}"
+   }
+  }
+ ]
+}
