@@ -1,0 +1,25 @@
+name: voice-test
+on:
+  workflow_dispatch:
+  push:
+    paths: ["test/script_wirecard_test.json", "scripts/voice_test.py", ".github/workflows/voice_test.yml"]
+permissions:
+  contents: write
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Narrate test script
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          N_VOICES: "3"
+        run: python3 scripts/voice_test.py
+      - name: Save results to repo
+        if: always()
+        run: |
+          git config user.name "firmenfriedhof-robot"
+          git config user.email "robot@users.noreply.github.com"
+          git add test/out || true
+          git commit -m "Voice test results" || echo "nothing to commit"
+          git push
