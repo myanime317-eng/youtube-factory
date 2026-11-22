@@ -22,7 +22,9 @@ script = json.load(open("test/script_wirecard_test.json"))
 text = "\n\n".join(l["text"] for l in script["lines"])
 
 user = call("GET", "/v1/user/subscription")
-print("subscription:", {k: user.get(k) for k in ("tier", "character_count", "character_limit")})
+sub = {k: user.get(k) for k in ("tier", "character_count", "character_limit")}
+print("subscription:", sub)
+json.dump(sub, open(f"{OUT}/subscription.json", "w"))
 
 found = call("GET", "/v1/shared-voices", params={
     "language": "de", "gender": "male", "use_cases": "narrative_story",
@@ -48,6 +50,19 @@ def score(v):
         if w in d: s += b
     return s
 picked = sorted(voices, key=score, reverse=True)[:int(os.environ.get("N_VOICES", "3"))]
+if sub.get("tier") == "free":  # free plan: library voices are blocked via API, use built-in (premade) voices
+    mine = call("GET", "/v1/voices").get("voices", [])
+    pre = [v for v in mine if v.get("category") == "premade" and (v.get("labels") or {}).get("gender") == "male"]
+    def pscore(v):
+        l = " ".join(str(x) for x in (v.get("labels") or {}).values()).lower() + " " + (v.get("description") or "").lower()
+        return sum(b for w, b in (("deep", 30), ("narrat", 25), ("authorit", 20), ("documentar", 30), ("news", 15),
+                                   ("middle", 10), ("old", 5), ("calm", 10), ("young", -15)) if w in l)
+    pre = sorted(pre, key=pscore, reverse=True)
+    json.dump([{"name": v["name"], "voice_id": v["voice_id"], "labels": v.get("labels")} for v in pre],
+              open(f"{OUT}/premade_male.json", "w"), indent=1)
+    picked = [{"voice_id": v["voice_id"], "public_owner_id": "", "name": v["name"],
+               "descriptive": (v.get("labels") or {}).get("descriptive"), "age": (v.get("labels") or {}).get("age"),
+               "accent": (v.get("labels") or {}).get("accent")} for v in pre[:2]]
 
 settings = {"stability": 0.5, "similarity_boost": 0.8, "style": 0.15, "use_speaker_boost": True, "speed": 0.95}
 results = []
