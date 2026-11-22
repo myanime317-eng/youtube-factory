@@ -1,0 +1,27 @@
+name: Make images
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "test/image_prompts.json"
+      - "scripts/make_images.py"
+      - ".github/workflows/make_images.yml"
+permissions:
+  contents: write
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate images
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 scripts/make_images.py test/image_prompts.json test/img
+      - name: Save results
+        run: |
+          git config user.name "firmenfriedhof-robot"
+          git config user.email "robot@users.noreply.github.com"
+          git add test/img
+          git commit -m "Test images" || echo "nothing to commit"
+          git pull --rebase && git push

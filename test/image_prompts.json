@@ -1,0 +1,18 @@
+{
+  "style": "cinematic film still, 35mm, shallow depth of field, dramatic low-key lighting, muted colors, subtle film grain, photorealistic, no logos",
+  "shots": [
+    {"id": "s01", "line": "l01", "prompt": "Night aerial view of a modern glass office building in a quiet suburb near Munich, only one floor lit, wet streets reflecting light, cold blue night with warm gold windows"},
+    {"id": "s02", "line": "l01", "prompt": "Close-up of a glowing payment card terminal on a dark desk, a hand holding a credit card above it, gold rim light"},
+    {"id": "s03", "line": "l02", "prompt": "Frankfurt stock exchange trading hall with a huge illuminated DAX index board, warm golden light, traders as silhouettes"},
+    {"id": "s04", "line": "l02", "prompt": "Bronze bull statue in front of a stock exchange at dusk, golden hour, celebratory atmosphere, confetti in the air"},
+    {"id": "s05", "line": "l03", "prompt": "An auditor in a dark office late at night studying a thick stack of balance sheets under a single desk lamp, cold light, tension"},
+    {"id": "s06", "line": "l04", "prompt": "An empty open bank vault with bare metal shelves, cold blue light, dust in the air, nothing inside"},
+    {"id": "s07", "line": "l05", "prompt": "Two bank documents on a dark wooden table, one stamped with a large red stamp, magnifying glass, harsh side light"},
+    {"id": "s08", "line": "l06", "prompt": "German newspaper front page on a table with the large headline WIRECARD PLEITE, coffee cup beside it, morning light, documentary realism"},
+    {"id": "s09", "line": "l06", "prompt": "Stock price chart on a computer monitor crashing straight down to zero in red, dark trading room, reflection on glasses"},
+    {"id": "s10", "line": "l07", "prompt": "Police officers escorting a man in a dark suit seen from behind out of a corporate building at dawn, press cameras flashing, no faces visible"},
+    {"id": "s11", "line": "l07", "prompt": "A small private jet on a dark rainy runway at night, stairs down, lights on, nobody in sight, mysterious"},
+    {"id": "s12", "line": "l08", "prompt": "Empty executive office at night, leather chair turned away from the desk, scattered papers, venetian blinds casting light stripes"},
+    {"id": "s13", "line": "l09", "prompt": "Foggy cemetery at night where the tombstones are shaped like small office towers, single lantern, gold and deep navy tones, eerie and elegant"}
+  ]
+}
