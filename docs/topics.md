@@ -1,5 +1,5 @@
 # Topic queue (top to bottom). Mark [x] when a job folder is created.
-- [ ] wirecard – Wirecard: vom Zahlungsdienstleister zum größten Bilanzbetrug Deutschlands
+- [x] wirecard – Wirecard: vom Zahlungsdienstleister zum größten Bilanzbetrug Deutschlands
 - [ ] schlecker – Schlecker: Aufstieg und Fall des Drogerie-Imperiums
 - [ ] airberlin – Air Berlin: wie Deutschlands zweitgrößte Airline abstürzte
 - [ ] quelle – Quelle: das Ende des Versandhaus-Giganten

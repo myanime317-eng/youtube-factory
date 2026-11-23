@@ -51,8 +51,8 @@ if titles != 1:
     errs.append("exactly one line needs \"title_card\": true (end of the cold open)")
 if chapters < 3:
     warn.append(f"only {chapters} chapters")
-if not 1500 <= words <= 2600:
-    warn.append(f"{words} words (target 1,800-2,200)")
+if not 1200 <= words <= 1900:
+    warn.append(f"{words} words (target 1,300-1,700)")
 for k in ("company", "subtitle", "title_bg", "youtube", "thumbnail", "shorts", "schedule", "sources"):
     if k not in sc:
         errs.append(f"script.json is missing \"{k}\"")

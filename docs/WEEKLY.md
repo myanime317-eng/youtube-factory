@@ -12,7 +12,7 @@ Audience: German-speaking (DE/AT/CH). Voice: Alexander (ElevenLabs v3, emotion t
 6. Keep it efficient: research once, write once, no test renders.
 
 ## Story rules (Magnates style)
-- 1,800–2,200 words → 12–15 minutes. Short sentences. Du-form is not used; neutral narrator, but vivid.
+- 1,300–1,700 words → 12–15 minutes (Eleven v3 with tags speaks ~100 words per minute). Short sentences. Du-form is not used; neutral narrator, but vivid.
 - **Cold open (45–60 s):** start at the most dramatic moment (peak or crash), the big number, the question. Ends with a line like "Das ist die Geschichte von X." → that line gets `"title_card": true`.
 - Then 4–6 chapters (`"chapter": {"n": 1, "title": "Der Aufstieg"}` on the first line of each). Typical: Anfänge → Aufstieg → Warnsignale → Absturz → Danach/Lehren.
 - Open loops ("Doch das war erst der Anfang."), concrete details, numbers, dates; a 1-second `"pause_before": 1.0` before 2–4 big reveals.

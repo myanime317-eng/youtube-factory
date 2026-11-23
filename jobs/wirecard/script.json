@@ -1,0 +1,1732 @@
+{
+ "company": "Wirecard",
+ "subtitle": "Die Firma, die es nie gab",
+ "title_bg": "s016",
+ "lines": [
+  {
+   "id": "l001",
+   "text": "Achtzehnter Juni zweitausendzwanzig. Aschheim, ein Vorort von München.",
+   "tags": "[calm]",
+   "mood": "calm",
+   "shots": [
+    "s001",
+    "s002"
+   ],
+   "music": "intro",
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "18. JUNI 2020",
+     "at": "Achtzehnter"
+    }
+   ]
+  },
+  {
+   "id": "l002",
+   "text": "In einem Konferenzraum warten Manager auf eine Nachricht, die alles entscheiden soll.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s003",
+    "s004"
+   ]
+  },
+  {
+   "id": "l003",
+   "text": "Dann kommt sie. Die Wirtschaftsprüfer verweigern das Testat.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s005",
+    "s006"
+   ],
+   "sfx": [
+    {
+     "name": "impact_2",
+     "at": "verweigern"
+    }
+   ]
+  },
+  {
+   "id": "l004",
+   "text": "Eins Komma neun Milliarden Euro, die auf Treuhandkonten in Asien liegen sollen, sind nicht auffindbar.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s007",
+    "s008"
+   ],
+   "overlays": [
+    {
+     "kind": "big",
+     "text": "1,9 MRD. €",
+     "sub": "nicht auffindbar",
+     "at": "Eins Komma"
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact_1",
+     "at": "Eins Komma"
+    }
+   ]
+  },
+  {
+   "id": "l005",
+   "text": "Einfach weg.",
+   "tags": "[whispers]",
+   "mood": "shock",
+   "shots": [
+    "s009"
+   ],
+   "pause_before": 1.0,
+   "sfx": [
+    {
+     "name": "braam_1",
+     "at": "Einfach"
+    }
+   ]
+  },
+  {
+   "id": "l006",
+   "text": "Sieben Tage später ist Wirecard pleite. Der erste Konzern in der Geschichte des DAX, der Insolvenz anmelden muss.",
+   "tags": "[dramatic]",
+   "mood": "shock",
+   "shots": [
+    "s010",
+    {
+     "graphic": "chart",
+     "label": "Aktienkurs Wirecard (EUR)",
+     "mode": "crash",
+     "points": [
+      [
+       "2005",
+       3
+      ],
+      [
+       "",
+       5
+      ],
+      [
+       "2007",
+       10
+      ],
+      [
+       "",
+       6
+      ],
+      [
+       "2009",
+       8
+      ],
+      [
+       "",
+       12
+      ],
+      [
+       "2011",
+       20
+      ],
+      [
+       "",
+       28
+      ],
+      [
+       "2013",
+       30
+      ],
+      [
+       "",
+       32
+      ],
+      [
+       "2015",
+       42
+      ],
+      [
+       "",
+       40
+      ],
+      [
+       "2017",
+       85
+      ],
+      [
+       "",
+       105
+      ],
+      [
+       "SEP 2018",
+       191
+      ],
+      [
+       "",
+       150
+      ],
+      [
+       "2019",
+       135
+      ],
+      [
+       "",
+       140
+      ],
+      [
+       "2020",
+       104
+      ],
+      [
+       "JUN 2020",
+       1.3
+      ]
+     ],
+     "peak": 18,
+     "drop_label": "−99 %"
+    },
+    "s011"
+   ],
+   "overlays": [
+    {
+     "kind": "big",
+     "text": "PLEITE",
+     "at": "pleite",
+     "dy": -40
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact_1",
+     "at": "pleite"
+    },
+    {
+     "name": "glitch_1",
+     "at": "Insolvenz"
+    }
+   ]
+  },
+  {
+   "id": "l007",
+   "text": "Der Vorstandschef sitzt bald in Untersuchungshaft. Sein wichtigster Mann flieht in einem Privatjet und taucht unter.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s012",
+    "s013"
+   ],
+   "sfx": [
+    {
+     "name": "siren_1",
+     "at": "Untersuchungshaft"
+    },
+    {
+     "name": "jet_1",
+     "at": "Privatjet"
+    }
+   ]
+  },
+  {
+   "id": "l008",
+   "text": "Wie konnte ein Unternehmen, das Anleger, Banken, Prüfer und sogar die Bundesregierung überzeugt hatte, über Jahre hinweg Geschäfte vortäuschen, die es offenbar nie gab?",
+   "tags": "[curious]",
+   "mood": "reveal",
+   "shots": [
+    "s014",
+    "s015"
+   ]
+  },
+  {
+   "id": "l009",
+   "text": "Das ist die Geschichte von Wirecard.",
+   "tags": "[ominous]",
+   "mood": "title",
+   "shots": [
+    "s016"
+   ],
+   "title_card": true
+  },
+  {
+   "id": "l010",
+   "text": "Die Geschichte beginnt Ende der Neunzigerjahre, mitten im Internet-Boom.",
+   "tags": "[calm]",
+   "mood": "calm",
+   "shots": [
+    "s017",
+    "s018"
+   ],
+   "chapter": {
+    "n": 1,
+    "title": "Der Anfang"
+   },
+   "music": "rise",
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "1999",
+     "at": "Neunzigerjahre"
+    }
+   ]
+  },
+  {
+   "id": "l011",
+   "text": "Neunzehnhundertneunundneunzig wird in München ein kleines Unternehmen gegründet, das Zahlungen im Internet abwickeln soll.",
+   "tags": "[calm]",
+   "mood": "calm",
+   "shots": [
+    "s019",
+    "s020"
+   ]
+  },
+  {
+   "id": "l012",
+   "text": "Das Prinzip ist einfach: Ein Kunde kauft online ein, und jemand muss dafür sorgen, dass das Geld sicher beim Händler ankommt.",
+   "tags": "[calm]",
+   "mood": "calm",
+   "shots": [
+    "s021",
+    "s022",
+    "s023"
+   ]
+  },
+  {
+   "id": "l013",
+   "text": "Doch die ersten Jahre sind hart. Als die Dotcom-Blase platzt, steht die junge Firma kurz vor dem Aus.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s024",
+    "s025"
+   ],
+   "sfx": [
+    {
+     "name": "glitch_1",
+     "at": "platzt"
+    }
+   ]
+  },
+  {
+   "id": "l014",
+   "text": "Zweitausendzwei übernimmt ein junger Wirtschaftsinformatiker aus Österreich die Führung: Markus Braun.",
+   "tags": "[serious]",
+   "mood": "calm",
+   "shots": [
+    {
+     "graphic": "card",
+     "name": "Markus Braun",
+     "role": "Vorstandschef ab 2002",
+     "note": "Wirtschaftsinformatiker aus Wien",
+     "status": "gold"
+    },
+    "s026"
+   ],
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "2002",
+     "at": "Zweitausendzwei"
+    }
+   ]
+  },
+  {
+   "id": "l015",
+   "text": "Braun hat zuvor als Berater gearbeitet. Er ist ehrgeizig, analytisch und überzeugt davon, dass Bezahlen bald fast nur noch digital stattfinden wird.",
+   "tags": "[calm]",
+   "mood": "calm",
+   "shots": [
+    "s027",
+    "s028"
+   ]
+  },
+  {
+   "id": "l016",
+   "text": "Er übernimmt nicht nur die Führung. Er wird auch einer der größten Aktionäre des Unternehmens.",
+   "tags": "[serious]",
+   "mood": "rise",
+   "shots": [
+    "s029",
+    "s030"
+   ]
+  },
+  {
+   "id": "l017",
+   "text": "Er tritt auf wie ein Visionär. Ruhig, technisch, immer in Rollkragenpullover und Sakko.",
+   "tags": "[calm]",
+   "mood": "calm",
+   "shots": [
+    "s031",
+    "s032"
+   ]
+  },
+  {
+   "id": "l018",
+   "text": "Bald holt er einen jungen Österreicher ins Unternehmen, der kaum Studium vorweisen kann, aber umso mehr Ehrgeiz: Jan Marsalek.",
+   "tags": "[curious]",
+   "mood": "tension",
+   "shots": [
+    "s033",
+    "s034"
+   ],
+   "sfx": [
+    {
+     "name": "heartbeat_1",
+     "at": "Marsalek"
+    }
+   ]
+  },
+  {
+   "id": "l019",
+   "text": "Marsalek kümmert sich um das Wachstum im Ausland. Er reist ständig, knüpft Kontakte und baut Geschäftsbeziehungen auf, die außerhalb des Konzerns kaum jemand versteht.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s035",
+    "s036"
+   ]
+  },
+  {
+   "id": "l020",
+   "text": "Und er findet ein Geschäft, das andere meiden: Zahlungen für Online-Glücksspiel und Erotikseiten.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s037",
+    "s038"
+   ]
+  },
+  {
+   "id": "l021",
+   "text": "Hier sind die Risiken hoch, aber auch die Gebühren. Und Wirecard verdient gut daran.",
+   "tags": "[impressed]",
+   "mood": "rise",
+   "shots": [
+    "s039",
+    "s040"
+   ],
+   "sfx": [
+    {
+     "name": "cash_1",
+     "at": "verdient"
+    }
+   ]
+  },
+  {
+   "id": "l022",
+   "text": "Zweitausendfünf kommt Wirecard über eine bereits börsennotierte Firma an die Frankfurter Börse. Ein Jahr später kauft das Unternehmen eine eigene Bank.",
+   "tags": "[impressed]",
+   "mood": "rise",
+   "shots": [
+    "s041",
+    "s042",
+    {
+     "graphic": "timeline",
+     "events": [
+      [
+       "1999",
+       "Gründung in München"
+      ],
+      [
+       "2002",
+       "Braun wird Chef"
+      ],
+      [
+       "2005",
+       "Börsengang"
+      ],
+      [
+       "2006",
+       "Eigene Bank"
+      ]
+     ],
+     "focus": 3
+    }
+   ],
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "2005",
+     "at": "Zweitausendfünf"
+    }
+   ]
+  },
+  {
+   "id": "l023",
+   "text": "Damit hat Wirecard etwas, das kaum ein Start-up besitzt: eine Banklizenz. Das Unternehmen wird zum Zahlungsdienstleister und zur Bank in einem.",
+   "tags": "[impressed]",
+   "mood": "rise",
+   "shots": [
+    "s043",
+    "s044"
+   ]
+  },
+  {
+   "id": "l024",
+   "text": "Für die Händler ist das bequem: Wirecard kann Zahlungen annehmen, Karten ausgeben und Konten führen, alles aus einer Hand.",
+   "tags": "[calm]",
+   "mood": "rise",
+   "shots": [
+    "s045",
+    "s046"
+   ]
+  },
+  {
+   "id": "l025",
+   "text": "Doch schon in diesen frühen Jahren gibt es erste Kritik. Anlegerschützer bemängeln, die Bilanzen seien schwer nachvollziehbar.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s047",
+    "s048"
+   ]
+  },
+  {
+   "id": "l026",
+   "text": "In den folgenden Jahren wächst Wirecard in einem Tempo, das die Branche staunen lässt.",
+   "tags": "[impressed]",
+   "mood": "rise",
+   "shots": [
+    "s049",
+    {
+     "graphic": "chart",
+     "label": "Aktienkurs Wirecard (EUR)",
+     "mode": "rise",
+     "points": [
+      [
+       "2005",
+       3
+      ],
+      [
+       "",
+       5
+      ],
+      [
+       "2007",
+       10
+      ],
+      [
+       "",
+       6
+      ],
+      [
+       "2009",
+       8
+      ],
+      [
+       "",
+       12
+      ],
+      [
+       "2011",
+       20
+      ],
+      [
+       "",
+       28
+      ],
+      [
+       "2013",
+       30
+      ],
+      [
+       "",
+       32
+      ],
+      [
+       "2015",
+       42
+      ],
+      [
+       "",
+       40
+      ],
+      [
+       "2017",
+       85
+      ],
+      [
+       "",
+       105
+      ],
+      [
+       "SEP 2018",
+       191
+      ],
+      [
+       "",
+       150
+      ],
+      [
+       "2019",
+       135
+      ],
+      [
+       "",
+       140
+      ],
+      [
+       "2020",
+       104
+      ],
+      [
+       "JUN 2020",
+       1.3
+      ]
+     ],
+     "peak": 14,
+     "peak_label": "SEP 2018"
+    },
+    "s050"
+   ],
+   "chapter": {
+    "n": 2,
+    "title": "Der Aufstieg"
+   },
+   "music": "rise"
+  },
+  {
+   "id": "l027",
+   "text": "Das Unternehmen kauft Firmen in Asien, im Nahen Osten und in Südamerika. Jedes Jahr meldet es neue Rekorde bei Umsatz und Gewinn.",
+   "tags": "[impressed]",
+   "mood": "rise",
+   "shots": [
+    {
+     "graphic": "map",
+     "from": [
+      11.58,
+      48.14,
+      "MÜNCHEN"
+     ],
+     "to": [
+      103.82,
+      1.35,
+      "SINGAPUR"
+     ],
+     "highlight": [
+      "DEU",
+      "SGP",
+      "IND",
+      "ARE"
+     ],
+     "caption": "Übernahmen in Asien und im Nahen Osten"
+    },
+    "s051",
+    "s052"
+   ]
+  },
+  {
+   "id": "l028",
+   "text": "Zweitausendfünfzehn zahlt Wirecard für Zahlungsfirmen in Indien rund dreihundertvierzig Millionen Euro. Ein Preis, über den sich später viele wundern.",
+   "tags": "[curious]",
+   "mood": "rise",
+   "shots": [
+    "s053",
+    "s054"
+   ],
+   "overlays": [
+    {
+     "kind": "counter",
+     "to": 340,
+     "unit": "MIO. €",
+     "label": "Übernahme in Indien",
+     "at": "dreihundertvierzig",
+     "decimals": 0
+    }
+   ]
+  },
+  {
+   "id": "l029",
+   "text": "Denn die gekauften Firmen sind deutlich weniger wert gewesen, als Wirecard dafür bezahlt hat. Wohin genau das Geld geflossen ist, bleibt lange unklar.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s055",
+    "s056"
+   ]
+  },
+  {
+   "id": "l030",
+   "text": "Analysten sind begeistert. Wirecard gilt als Deutschlands Antwort auf das Silicon Valley.",
+   "tags": "[impressed]",
+   "mood": "rise",
+   "shots": [
+    "s057",
+    "s058"
+   ]
+  },
+  {
+   "id": "l031",
+   "text": "Im September zweitausendachtzehn erreicht der Aufstieg seinen Höhepunkt.",
+   "tags": "[dramatic]",
+   "mood": "rise",
+   "shots": [
+    "s059"
+   ],
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "SEPTEMBER 2018",
+     "at": "September"
+    }
+   ]
+  },
+  {
+   "id": "l032",
+   "text": "Wirecard steigt in den DAX auf, die erste Liga der deutschen Börse. Und verdrängt dafür ausgerechnet die Commerzbank.",
+   "tags": "[impressed]",
+   "mood": "rise",
+   "shots": [
+    "s060",
+    "s061"
+   ],
+   "overlays": [
+    {
+     "kind": "big",
+     "text": "DAX",
+     "color": "gold",
+     "at": "DAX"
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact_2",
+     "at": "DAX"
+    }
+   ]
+  },
+  {
+   "id": "l033",
+   "text": "Der Börsenwert liegt bei rund vierundzwanzig Milliarden Euro. Mehr als bei der Deutschen Bank.",
+   "tags": "[impressed]",
+   "mood": "rise",
+   "shots": [
+    "s062",
+    "s063"
+   ],
+   "overlays": [
+    {
+     "kind": "counter",
+     "to": 24,
+     "unit": "MRD. €",
+     "label": "Börsenwert",
+     "at": "vierundzwanzig",
+     "decimals": 0
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact_2",
+     "at": "Milliarden"
+    }
+   ]
+  },
+  {
+   "id": "l034",
+   "text": "Markus Braun ist auf dem Papier Milliardär. Er spricht auf Konferenzen über die Zukunft des Bezahlens und über eine Welt ohne Bargeld.",
+   "tags": "[calm]",
+   "mood": "rise",
+   "shots": [
+    "s064",
+    "s065"
+   ]
+  },
+  {
+   "id": "l035",
+   "text": "Zweitausendneunzehn investiert sogar der japanische Technologieinvestor SoftBank rund neunhundert Millionen Euro in Wirecard.",
+   "tags": "[impressed]",
+   "mood": "rise",
+   "shots": [
+    "s066",
+    "s067"
+   ],
+   "overlays": [
+    {
+     "kind": "counter",
+     "to": 900,
+     "unit": "MIO. €",
+     "label": "SoftBank-Investment",
+     "at": "neunhundert",
+     "decimals": 0
+    }
+   ]
+  },
+  {
+   "id": "l036",
+   "text": "Für viele ist das der endgültige Beweis: Wirecard ist ein ernstzunehmender Weltkonzern.",
+   "tags": "[impressed]",
+   "mood": "rise",
+   "shots": [
+    "s068"
+   ]
+  },
+  {
+   "id": "l037",
+   "text": "Doch während die Aktie steigt, gibt es Menschen, die etwas anderes sehen.",
+   "tags": "[ominous]",
+   "mood": "tension",
+   "shots": [
+    "s069",
+    "s070"
+   ],
+   "music": "tension"
+  },
+  {
+   "id": "l038",
+   "text": "Schon früh tauchen Zweifel auf. Anlegerschützer stellen Fragen zur Bilanz. Leerverkäufer veröffentlichen kritische Berichte.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s071",
+    "s072"
+   ],
+   "chapter": {
+    "n": 3,
+    "title": "Die Warnsignale"
+   },
+   "music": "tension"
+  },
+  {
+   "id": "l039",
+   "text": "Zweitausendsechzehn erscheint ein anonymer Bericht, der Wirecard Geldwäsche und Bilanzmanipulation vorwirft.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s073"
+   ],
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "2016",
+     "at": "Zweitausendsechzehn"
+    }
+   ],
+   "sfx": [
+    {
+     "name": "typing_1",
+     "at": "anonymer"
+    }
+   ]
+  },
+  {
+   "id": "l040",
+   "text": "Die Aktie bricht ein. Doch Wirecard weist alles zurück und spricht von einem Angriff von Spekulanten.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s074",
+    "s075"
+   ]
+  },
+  {
+   "id": "l041",
+   "text": "Und das Erstaunliche: Viele glauben dem Unternehmen. Der Kurs erholt sich schnell.",
+   "tags": "[curious]",
+   "mood": "rise",
+   "shots": [
+    "s076"
+   ]
+  },
+  {
+   "id": "l042",
+   "text": "Dann wird ein Journalist der Financial Times hellhörig. Sein Name: Dan McCrum.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s077",
+    "s078",
+    {
+     "graphic": "card",
+     "name": "Dan McCrum",
+     "role": "Journalist, Financial Times",
+     "note": "Recherchiert jahrelang zu Wirecard",
+     "status": "gold"
+    }
+   ]
+  },
+  {
+   "id": "l043",
+   "text": "Er recherchiert jahrelang. Im Januar zweitausendneunzehn veröffentlicht die Zeitung Hinweise von Insidern aus Singapur.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s079",
+    "s080",
+    "s081"
+   ],
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "JANUAR 2019",
+     "at": "Januar"
+    }
+   ]
+  },
+  {
+   "id": "l044",
+   "text": "Schon Jahre zuvor hatte McCrum in einer Artikelserie die Zahlen von Wirecard angezweifelt. Damals hatte kaum jemand reagiert.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s082",
+    "s083"
+   ]
+  },
+  {
+   "id": "l045",
+   "text": "Er und seine Kollegen berichten später, sie seien beobachtet worden. Ihre Rechner seien Ziel von Hackerangriffen gewesen.",
+   "tags": "[ominous]",
+   "mood": "tension",
+   "shots": [
+    "s084",
+    "s085"
+   ],
+   "sfx": [
+    {
+     "name": "glitch_1",
+     "at": "Hackerangriffen"
+    }
+   ]
+  },
+  {
+   "id": "l046",
+   "text": "Mitarbeiter sollen dort Verträge zurückdatiert und Geld im Kreis geschickt haben, um Umsätze vorzutäuschen.",
+   "tags": "[slowly]",
+   "mood": "tension",
+   "shots": [
+    "s086",
+    "s087"
+   ]
+  },
+  {
+   "id": "l047",
+   "text": "In Singapur durchsucht die Polizei die Büros von Wirecard. Doch der Konzern spricht weiter von haltlosen Vorwürfen.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s088",
+    "s089"
+   ],
+   "sfx": [
+    {
+     "name": "siren_1",
+     "at": "Polizei"
+    }
+   ]
+  },
+  {
+   "id": "l048",
+   "text": "Die Reaktion in Deutschland ist bemerkenswert. Nicht Wirecard gerät ins Visier, sondern die Journalisten.",
+   "tags": "[surprised]",
+   "mood": "reveal",
+   "shots": [
+    "s090",
+    "s091"
+   ]
+  },
+  {
+   "id": "l049",
+   "text": "Die Finanzaufsicht BaFin verbietet für zwei Monate Wetten auf fallende Wirecard-Kurse. Ein bis dahin einmaliger Schritt.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s092",
+    "s093"
+   ],
+   "overlays": [
+    {
+     "kind": "big",
+     "text": "LEERVERKAUFSVERBOT",
+     "color": "white",
+     "at": "verbietet"
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact_2",
+     "at": "verbietet"
+    }
+   ]
+  },
+  {
+   "id": "l050",
+   "text": "Und die Staatsanwaltschaft ermittelt gegen Reporter der Financial Times wegen des Verdachts der Marktmanipulation.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s094",
+    "s095"
+   ]
+  },
+  {
+   "id": "l051",
+   "text": "Im Herbst zweitausendneunzehn legt die Financial Times nach. Ein großer Teil der Gewinne komme von sogenannten Drittpartnern in Dubai, Singapur und auf den Philippinen.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    {
+     "graphic": "map",
+     "from": [
+      11.58,
+      48.14,
+      "MÜNCHEN"
+     ],
+     "to": [
+      55.27,
+      25.2,
+      "DUBAI"
+     ],
+     "highlight": [
+      "DEU",
+      "ARE",
+      "SGP",
+      "PHL"
+     ],
+     "caption": "Drittpartner-Geschäft: Dubai, Singapur, Philippinen"
+    },
+    "s096",
+    "s097"
+   ]
+  },
+  {
+   "id": "l052",
+   "text": "Firmen, die das Geschäft für Wirecard abwickeln sollen. Doch als Reporter die Adressen besuchen, finden sie kaum Spuren eines echten Betriebs.",
+   "tags": "[slowly]",
+   "mood": "reveal",
+   "shots": [
+    "s098",
+    "s099"
+   ],
+   "sfx": [
+    {
+     "name": "heartbeat_1",
+     "at": "kaum"
+    }
+   ]
+  },
+  {
+   "id": "l053",
+   "text": "Dabei soll über dieses Drittpartnergeschäft ein großer Teil des gesamten Konzerngewinns entstanden sein.",
+   "tags": "[serious]",
+   "mood": "reveal",
+   "shots": [
+    {
+     "graphic": "text",
+     "title": "Rund die Hälfte",
+     "sub": "des Gewinns kam laut FT aus dem Drittpartnergeschäft",
+     "red": true
+    }
+   ]
+  },
+  {
+   "id": "l054",
+   "text": "Wirecard bleibt bei seiner Linie. Und beauftragt die Wirtschaftsprüfer von KPMG mit einer Sonderprüfung, um die Vorwürfe endgültig zu widerlegen.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s100",
+    "s101"
+   ]
+  },
+  {
+   "id": "l055",
+   "text": "Im April zweitausendzwanzig liegt der Bericht vor. Und er ist ein Schock.",
+   "tags": "[dramatic]",
+   "mood": "shock",
+   "shots": [
+    "s102"
+   ],
+   "chapter": {
+    "n": 4,
+    "title": "Der Absturz"
+   },
+   "music": "collapse",
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "APRIL 2020",
+     "at": "April"
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact_1",
+     "at": "Schock"
+    }
+   ]
+  },
+  {
+   "id": "l056",
+   "text": "Die Prüfer können nicht bestätigen, dass die Umsätze mit den Drittpartnern überhaupt existieren. Es fehlen grundlegende Unterlagen.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s103",
+    "s104"
+   ]
+  },
+  {
+   "id": "l057",
+   "text": "Wirecard verkündet trotzdem, es gebe keine Belege für eine Bilanzmanipulation. Die Aktie stürzt ab.",
+   "tags": "[serious]",
+   "mood": "shock",
+   "shots": [
+    {
+     "graphic": "text",
+     "title": "Keine Belege?",
+     "sub": "Wirecard nach dem KPMG-Bericht, April 2020"
+    },
+    "s105",
+    "s106"
+   ],
+   "sfx": [
+    {
+     "name": "glitch_1",
+     "at": "stürzt"
+    }
+   ]
+  },
+  {
+   "id": "l058",
+   "text": "Im Juni kommt die Wahrheit ans Licht. Die Prüfer von EY verlangen Nachweise für die eins Komma neun Milliarden Euro auf den Treuhandkonten.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s107",
+    "s108"
+   ],
+   "overlays": [
+    {
+     "kind": "counter",
+     "to": 1.9,
+     "unit": "MRD. €",
+     "label": "Treuhandkonten",
+     "at": "eins Komma"
+    }
+   ]
+  },
+  {
+   "id": "l059",
+   "text": "Die beiden philippinischen Banken antworten knapp: Die Bestätigungen seien gefälscht. Die Konten gibt es nicht.",
+   "tags": "[dramatic]",
+   "mood": "shock",
+   "shots": [
+    "s109",
+    {
+     "graphic": "map",
+     "from": [
+      11.58,
+      48.14,
+      "MÜNCHEN"
+     ],
+     "to": [
+      120.98,
+      14.6,
+      "MANILA"
+     ],
+     "highlight": [
+      "DEU",
+      "PHL"
+     ],
+     "caption": "Die Konten auf den Philippinen gibt es nicht"
+    },
+    "s110"
+   ],
+   "overlays": [
+    {
+     "kind": "big",
+     "text": "GEFÄLSCHT",
+     "at": "gefälscht"
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact_1",
+     "at": "gefälscht"
+    }
+   ]
+  },
+  {
+   "id": "l060",
+   "text": "Danach geht alles sehr schnell. Markus Braun tritt zurück. Wenige Tage später wird er festgenommen.",
+   "tags": "[serious]",
+   "mood": "shock",
+   "shots": [
+    "s111",
+    "s112"
+   ],
+   "sfx": [
+    {
+     "name": "camera_1",
+     "at": "zurück"
+    },
+    {
+     "name": "siren_1",
+     "at": "festgenommen"
+    }
+   ]
+  },
+  {
+   "id": "l061",
+   "text": "Wirecard teilt mit, die eins Komma neun Milliarden Euro existierten mit überwiegender Wahrscheinlichkeit nicht.",
+   "tags": "[serious]",
+   "mood": "shock",
+   "shots": [
+    "s113",
+    "s114"
+   ]
+  },
+  {
+   "id": "l062",
+   "text": "Braun kommt zunächst gegen eine Kaution von fünf Millionen Euro frei. Einen Monat später wird er erneut festgenommen. Seitdem sitzt er in Untersuchungshaft.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s115",
+    "s116"
+   ],
+   "overlays": [
+    {
+     "kind": "big",
+     "text": "U-HAFT",
+     "at": "Untersuchungshaft"
+    }
+   ]
+  },
+  {
+   "id": "l063",
+   "text": "Er bestreitet bis heute jede Schuld. Für ihn gilt die Unschuldsvermutung.",
+   "tags": "[calm]",
+   "mood": "reflective",
+   "shots": [
+    "s117"
+   ]
+  },
+  {
+   "id": "l064",
+   "text": "Am fünfundzwanzigsten Juni zweitausendzwanzig meldet Wirecard Insolvenz an. Aus einem der wertvollsten Konzerne Deutschlands ist in wenigen Tagen ein Trümmerhaufen geworden.",
+   "tags": "[dramatic]",
+   "mood": "shock",
+   "shots": [
+    "s118",
+    "s119"
+   ],
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "25. JUNI 2020",
+     "at": "fünfundzwanzigsten"
+    },
+    {
+     "kind": "big",
+     "text": "INSOLVENZ",
+     "at": "Insolvenz"
+    }
+   ],
+   "sfx": [
+    {
+     "name": "braam_1",
+     "at": "Insolvenz"
+    }
+   ]
+  },
+  {
+   "id": "l065",
+   "text": "Im August muss Wirecard den DAX verlassen. Nur zwei Jahre nach dem gefeierten Aufstieg.",
+   "tags": "[sad]",
+   "mood": "reflective",
+   "shots": [
+    "s120",
+    {
+     "graphic": "timeline",
+     "events": [
+      [
+       "SEP 2018",
+       "Aufstieg in den DAX"
+      ],
+      [
+       "APR 2020",
+       "KPMG-Bericht"
+      ],
+      [
+       "18.06.2020",
+       "1,9 Mrd. fehlen"
+      ],
+      [
+       "25.06.2020",
+       "Insolvenz"
+      ],
+      [
+       "AUG 2020",
+       "Raus aus dem DAX"
+      ]
+     ],
+     "focus": 4,
+     "focus_red": true
+    },
+    "s121"
+   ]
+  },
+  {
+   "id": "l066",
+   "text": "Rund zwanzig Milliarden Euro Börsenwert sind vernichtet. Hunderttausende Anleger verlieren Geld, viele davon Kleinanleger.",
+   "tags": "[sad]",
+   "mood": "reflective",
+   "shots": [
+    "s122",
+    "s123"
+   ],
+   "overlays": [
+    {
+     "kind": "counter",
+     "to": 20,
+     "unit": "MRD. €",
+     "label": "vernichtet",
+     "at": "zwanzig",
+     "decimals": 0
+    }
+   ]
+  },
+  {
+   "id": "l067",
+   "text": "Doch die größte Frage dreht sich um einen anderen Mann.",
+   "tags": "[ominous]",
+   "mood": "reveal",
+   "shots": [
+    "s124"
+   ],
+   "chapter": {
+    "n": 5,
+    "title": "Der Mann, der verschwand"
+   },
+   "music": "dark"
+  },
+  {
+   "id": "l068",
+   "text": "Jan Marsalek, Vorstand für das operative Geschäft. Er war zuständig für genau jene Geschäfte in Asien, die nie existiert haben sollen.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    {
+     "graphic": "card",
+     "name": "Jan Marsalek",
+     "role": "Vorstand Operatives Geschäft",
+     "note": "Seit Juni 2020 auf der Flucht",
+     "status": "red"
+    },
+    "s125",
+    "s126"
+   ]
+  },
+  {
+   "id": "l069",
+   "text": "Am neunzehnten Juni steigt er auf einem kleinen Flugplatz bei Wien in ein Privatflugzeug. Ziel: Minsk.",
+   "tags": "[slowly]",
+   "mood": "tension",
+   "shots": [
+    "s127",
+    {
+     "graphic": "map",
+     "from": [
+      16.25,
+      47.96,
+      "BAD VÖSLAU"
+     ],
+     "to": [
+      27.56,
+      53.9,
+      "MINSK"
+     ],
+     "highlight": [
+      "AUT",
+      "BLR"
+     ],
+     "caption": "19. Juni 2020: Flucht nach Belarus"
+    },
+    "s128"
+   ],
+   "sfx": [
+    {
+     "name": "jet_1",
+     "at": "Privatflugzeug"
+    }
+   ]
+  },
+  {
+   "id": "l070",
+   "text": "Seitdem wird er mit internationalem Haftbefehl gesucht.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s129"
+   ],
+   "overlays": [
+    {
+     "kind": "big",
+     "text": "GESUCHT",
+     "at": "gesucht"
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact_2",
+     "at": "gesucht"
+    }
+   ]
+  },
+  {
+   "id": "l071",
+   "text": "Recherchen von Journalisten zeigen später ein Leben, das wie aus einem Spionageroman wirkt. Kontakte zu Geheimdiensten, falsche Identitäten, Reisen in Krisengebiete.",
+   "tags": "[curious]",
+   "mood": "tension",
+   "shots": [
+    "s130",
+    "s131"
+   ]
+  },
+  {
+   "id": "l072",
+   "text": "Zweitausendfünfundzwanzig verurteilt ein Gericht in London mehrere Mitglieder eines Spionagerings. Nach Angaben der Ermittler erhielt die Gruppe ihre Aufträge von Marsalek.",
+   "tags": "[serious]",
+   "mood": "tension",
+   "shots": [
+    "s132",
+    "s133"
+   ],
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "LONDON 2025",
+     "at": "London"
+    }
+   ]
+  },
+  {
+   "id": "l073",
+   "text": "Zweitausendfünfundzwanzig spürt ein internationales Rechercheteam ihn in Moskau auf. Er soll dort unter falschem Namen leben.",
+   "tags": "[serious]",
+   "mood": "reveal",
+   "shots": [
+    "s134",
+    {
+     "graphic": "map",
+     "from": [
+      11.58,
+      48.14,
+      "MÜNCHEN"
+     ],
+     "to": [
+      37.62,
+      55.75,
+      "MOSKAU"
+     ],
+     "highlight": [
+      "DEU",
+      "RUS"
+     ],
+     "caption": "2025: Spur nach Moskau"
+    },
+    "s135"
+   ],
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "2025",
+     "at": "Zweitausendfünfundzwanzig"
+    }
+   ]
+  },
+  {
+   "id": "l074",
+   "text": "Russland bestreitet, seinen Aufenthaltsort zu kennen. Ausgeliefert wurde er bis heute nicht.",
+   "tags": "[ominous]",
+   "mood": "reflective",
+   "shots": [
+    "s136"
+   ]
+  },
+  {
+   "id": "l075",
+   "text": "Bleibt die Frage, wie das alles so lange gut gehen konnte.",
+   "tags": "[curious]",
+   "mood": "reflective",
+   "shots": [
+    "s137"
+   ],
+   "chapter": {
+    "n": 6,
+    "title": "Wer hat versagt?"
+   },
+   "music": "reflective"
+  },
+  {
+   "id": "l076",
+   "text": "Die Prüfer von EY hatten die Bilanzen über ein Jahrzehnt lang testiert. Die BaFin hatte die Kritiker verfolgt statt das Unternehmen.",
+   "tags": "[serious]",
+   "mood": "reflective",
+   "shots": [
+    "s138",
+    "s139"
+   ]
+  },
+  {
+   "id": "l077",
+   "text": "Die Prüfaufsicht verhängt später Sanktionen gegen EY. Für zwei Jahre darf die Gesellschaft keine neuen Prüfmandate bei börsennotierten Unternehmen annehmen.",
+   "tags": "[serious]",
+   "mood": "reflective",
+   "shots": [
+    "s140",
+    "s141"
+   ]
+  },
+  {
+   "id": "l078",
+   "text": "Und selbst die Bundesregierung hatte sich für Wirecard eingesetzt, etwa bei einer Reise der Kanzlerin nach China.",
+   "tags": "[serious]",
+   "mood": "reflective",
+   "shots": [
+    "s142",
+    "s143"
+   ]
+  },
+  {
+   "id": "l079",
+   "text": "Ein Untersuchungsausschuss des Bundestags arbeitet den Skandal auf. Der Chef der BaFin muss gehen. Die Aufsicht wird neu aufgestellt.",
+   "tags": "[serious]",
+   "mood": "reflective",
+   "shots": [
+    "s144",
+    "s145"
+   ],
+   "sfx": [
+    {
+     "name": "paper_1",
+     "at": "Untersuchungsausschuss"
+    }
+   ]
+  },
+  {
+   "id": "l080",
+   "text": "Der Bundestag beschließt neue Regeln für Wirtschaftsprüfer und Finanzaufsicht. Prüfer müssen häufiger wechseln, die BaFin bekommt mehr Befugnisse.",
+   "tags": "[calm]",
+   "mood": "reflective",
+   "shots": [
+    "s146",
+    "s147"
+   ]
+  },
+  {
+   "id": "l081",
+   "text": "Seit Dezember zweitausendzweiundzwanzig steht Markus Braun in München vor Gericht, gemeinsam mit zwei weiteren Angeklagten.",
+   "tags": "[calm]",
+   "mood": "reflective",
+   "shots": [
+    "s148",
+    "s149"
+   ],
+   "overlays": [
+    {
+     "kind": "date",
+     "text": "SEIT DEZ. 2022",
+     "at": "Dezember"
+    }
+   ]
+  },
+  {
+   "id": "l082",
+   "text": "Nach fast vier Jahren und fast dreihundert Verhandlungstagen steht das Urteil kurz bevor.",
+   "tags": "[serious]",
+   "mood": "reflective",
+   "shots": [
+    "s150",
+    "s151"
+   ],
+   "overlays": [
+    {
+     "kind": "counter",
+     "to": 290,
+     "unit": "TAGE",
+     "label": "Verhandlungstage",
+     "at": "dreihundert",
+     "decimals": 0
+    }
+   ]
+  },
+  {
+   "id": "l083",
+   "text": "Das Geld der Anleger ist weitgehend verloren. Der Insolvenzverwalter sagt, das angebliche Geschäft habe nach seinen Erkenntnissen gar nicht existiert.",
+   "tags": "[sad]",
+   "mood": "reflective",
+   "shots": [
+    "s152",
+    "s153"
+   ]
+  },
+  {
+   "id": "l084",
+   "text": "Wirecard zeigt, wie gefährlich eine gute Geschichte sein kann. Wenn alle an den Erfolg glauben wollen, stellt kaum jemand die unbequemen Fragen.",
+   "tags": "[calm]",
+   "mood": "reflective",
+   "shots": [
+    "s154",
+    "s155"
+   ]
+  },
+  {
+   "id": "l085",
+   "text": "Eine Firma mit einer großen Vision, ein charismatischer Chef, Rekordzahlen jedes Jahr und eine Börse, die immer höhere Kurse belohnt.",
+   "tags": "[calm]",
+   "mood": "reflective",
+   "shots": [
+    "s156",
+    "s157"
+   ]
+  },
+  {
+   "id": "l086",
+   "text": "Kritiker wurden als Spekulanten abgetan, Warnungen als Angriffe auf einen deutschen Hoffnungsträger.",
+   "tags": "[serious]",
+   "mood": "reflective",
+   "shots": [
+    "s158",
+    "s159"
+   ]
+  },
+  {
+   "id": "l087",
+   "text": "Am Ende waren es nicht die Aufseher, sondern ein Journalist und ein paar Skeptiker, die recht behielten.",
+   "tags": "[calm]",
+   "mood": "reflective",
+   "shots": [
+    "s160",
+    "s161"
+   ]
+  },
+  {
+   "id": "l088",
+   "text": "Und auf dem Firmenfriedhof der deutschen Wirtschaft liegt ein Name, der einmal für die Zukunft stand.",
+   "tags": "[ominous]",
+   "mood": "reflective",
+   "shots": [
+    "s162",
+    "s163"
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Wirecard: Wie Deutschlands größter Betrug alle täuschte",
+  "description": "Vom kleinen Zahlungsdienstleister zum DAX-Konzern mit 24 Milliarden Euro Börsenwert – und dann fehlen 1,9 Milliarden Euro. Die ganze Geschichte von Wirecard: Aufstieg, Warnsignale, Absturz und die Flucht von Jan Marsalek. Eine Wirtschaftsdoku über den größten Bilanzskandal der deutschen Nachkriegsgeschichte.",
+  "tags": [
+   "Wirecard",
+   "Wirecard Skandal",
+   "Wirecard Doku",
+   "Markus Braun",
+   "Jan Marsalek",
+   "Bilanzskandal",
+   "DAX",
+   "BaFin",
+   "Wirtschaftsdoku",
+   "Aufstieg und Fall",
+   "Firmenfriedhof"
+  ],
+  "hashtags": [
+   "Wirecard",
+   "Wirtschaftsdoku",
+   "Firmenfriedhof"
+  ]
+ },
+ "thumbnail": {
+  "bg": "thumb",
+  "lines": [
+   "1,9 MILLIARDEN",
+   "EINFACH WEG?"
+  ],
+  "accent": "WEG?",
+  "accent_color": "yellow",
+  "inset": "s010",
+  "text_pos": "bottom_left"
+ },
+ "shorts": [
+  {
+   "id": "short1",
+   "from": "l001",
+   "to": "l007",
+   "hook": "1,9 Milliarden einfach WEG",
+   "title": "Wie 1,9 Milliarden Euro einfach verschwanden #shorts",
+   "description": "Der Tag, an dem Wirecard zusammenbrach.",
+   "tags": [
+    "Wirecard",
+    "Skandal",
+    "Shorts"
+   ]
+  },
+  {
+   "id": "short2",
+   "from": "l048",
+   "to": "l050",
+   "hook": "Deutschland jagte die FALSCHEN",
+   "title": "Warum Deutschland die Journalisten verfolgte statt Wirecard #shorts",
+   "description": "BaFin, Leerverkaufsverbot und Ermittlungen gegen die Financial Times.",
+   "tags": [
+    "Wirecard",
+    "BaFin",
+    "Shorts"
+   ]
+  },
+  {
+   "id": "short3",
+   "from": "l051",
+   "to": "l053",
+   "hook": "Die Firmen gab es NICHT",
+   "title": "Wirecards Partner: Adressen ohne Firma #shorts",
+   "description": "Das Drittpartner-Geschäft von Wirecard.",
+   "tags": [
+    "Wirecard",
+    "Betrug",
+    "Shorts"
+   ]
+  },
+  {
+   "id": "short4",
+   "from": "l068",
+   "to": "l070",
+   "hook": "Vom DAX-Vorstand zum PHANTOM",
+   "title": "Jan Marsalek: Flucht im Privatjet #shorts",
+   "description": "Die Flucht des Wirecard-Vorstands Jan Marsalek.",
+   "tags": [
+    "Jan Marsalek",
+    "Wirecard",
+    "Shorts"
+   ]
+  },
+  {
+   "id": "short5",
+   "from": "l031",
+   "to": "l033",
+   "hook": "Wertvoller als die DEUTSCHE BANK",
+   "title": "Wirecard: Mehr wert als die Deutsche Bank #shorts",
+   "description": "Der Höhepunkt von Wirecard im September 2018.",
+   "tags": [
+    "Wirecard",
+    "DAX",
+    "Shorts"
+   ]
+  }
+ ],
+ "schedule": {
+  "episode": "2026-11-26T16:00:00Z",
+  "shorts": [
+   "2026-11-27T16:00:00Z",
+   "2026-11-28T16:00:00Z",
+   "2026-11-29T16:00:00Z",
+   "2026-11-30T16:00:00Z",
+   "2026-12-01T16:00:00Z"
+  ]
+ },
+ "sources": [
+  "Dan McCrum: Money Men – A Hot Startup, a Billion Dollar Fraud, a Fight for the Truth (2022)",
+  "Financial Times: House of Wirecard / Wirecard-Recherchen 2019–2020",
+  "Deutscher Bundestag: Bericht des 3. Untersuchungsausschusses (Wirecard), Juni 2021",
+  "KPMG: Bericht über die unabhängige Sonderuntersuchung Wirecard AG, April 2020",
+  "Wirecard AG, Ad-hoc-Mitteilungen 18.–25. Juni 2020",
+  "dpa / t-online: Wirecard-Prozess: Urteil in Sicht, 12.11.2026",
+  "LTO: Insolvenzverwalter Jaffé als Zeuge im Wirecard-Prozess, 09.07.2025",
+  "Spiegel / ZDF / The Insider: Recherche zu Jan Marsalek in Moskau, September 2025"
+ ]
+}
