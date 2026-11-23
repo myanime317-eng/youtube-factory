@@ -3,13 +3,13 @@
   "flow_project": "Firmenfriedhof_Wirecard_Test",
   "max_credits": 20,
   "clips": [
-    {"id": "c01", "shot": "s01", "image": "test/flow_img/s01.png", "duration": 5,
+    {"id": "c01", "shot": "s01", "image": "test/clip_start/s01.jpg", "duration": 5,
      "prompt": "Slow cinematic drone push-in toward the glass office headquarters at blue hour, lights flicker on in windows, cars' headlights move on the wet roads, smooth stable camera, no text"},
-    {"id": "c14", "shot": "s14", "image": "test/flow_img/s14.png", "duration": 5,
+    {"id": "c14", "shot": "s14", "image": "test/clip_start/s14.jpg", "duration": 5,
      "prompt": "The red stock chart on the screen keeps plunging down, numbers flicker and turn red, the man slowly lowers his head, red light pulses on him, slow push-in, tense"},
-    {"id": "c15", "shot": "s15", "image": "test/flow_img/s15.png", "duration": 5,
+    {"id": "c15", "shot": "s15", "image": "test/clip_start/s15.jpg", "duration": 5,
      "prompt": "Police officers walk the handcuffed man in a dark suit toward the police car, blue lights flashing and reflecting on wet ground, light rain, camera follows slowly from behind, faces never visible"},
-    {"id": "c16", "shot": "s16", "image": "test/flow_img/s16.png", "duration": 5,
+    {"id": "c16", "shot": "s16", "image": "test/clip_start/s16.jpg", "duration": 5,
      "prompt": "The private jet accelerates down the rainy runway and lifts off into the night, spray and mist swirl behind it, runway lights streak, camera tracks it"}
   ]
 }
