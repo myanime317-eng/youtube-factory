@@ -13,7 +13,8 @@ jobs:
       - name: Narrate test script
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          N_VOICES: "2"
+          N_VOICES: "3"
+          PICK_IDS: "kkJxCnlRCckmfFvzDW5Q,re2r5d74PqDzicySNW0I,Fghah4fztZORbiKfIGAs"
         run: python3 scripts/voice_test.py
       - name: Save results to repo
         if: always()

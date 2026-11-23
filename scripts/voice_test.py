@@ -50,6 +50,9 @@ def score(v):
         if w in d: s += b
     return s
 picked = sorted(voices, key=score, reverse=True)[:int(os.environ.get("N_VOICES", "3"))]
+if os.environ.get("PICK_IDS"):  # hand-picked narrators
+    want = os.environ["PICK_IDS"].split(",")
+    picked = [v for w in want for v in voices if v["voice_id"] == w]
 if sub.get("tier") == "free":  # free plan: library voices are blocked via API, use built-in (premade) voices
     mine = call("GET", "/v1/voices").get("voices", [])
     pre = [v for v in mine if v.get("category") == "premade" and (v.get("labels") or {}).get("gender") == "male"]
