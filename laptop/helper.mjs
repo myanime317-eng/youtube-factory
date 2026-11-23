@@ -119,6 +119,12 @@ async function runJob({ file, spec }) {
   for (let start = 0; start < shots.length; start += BATCH) {
     const part = shots.slice(start, start + BATCH);
     log(`Job ${file}: ${part.length} images (${shots.length - start} left)`);
+    try {  // fresh page before each batch: after sleep or a failed run Flow's UI can be stuck and Agent mode won't start
+      const page = await getFlowPage();
+      await page.reload({ waitUntil: "domcontentloaded" });
+      await sleep(6000);
+      await ensureProject(c);
+    } catch (e) { log("reload skipped:", e.message.slice(0, 120)); }
     // own folder per batch, so file numbers scene-01.. match this batch's scene order exactly
     const queued = await c.agent({
       project: `${name}_${Date.now()}`,
