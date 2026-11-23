@@ -1,0 +1,13 @@
+# Topic queue (top to bottom). Mark [x] when a job folder is created.
+- [ ] wirecard – Wirecard: vom Zahlungsdienstleister zum größten Bilanzbetrug Deutschlands
+- [ ] schlecker – Schlecker: Aufstieg und Fall des Drogerie-Imperiums
+- [ ] airberlin – Air Berlin: wie Deutschlands zweitgrößte Airline abstürzte
+- [ ] quelle – Quelle: das Ende des Versandhaus-Giganten
+- [ ] grundig – Grundig: vom Wirtschaftswunder zur Insolvenz
+- [ ] nokia-bochum – Nokia in Bochum: Subventionen, Werk, Schließung
+- [ ] neckermann – Neckermann: "Neckermann macht's möglich" – bis es nicht mehr ging
+- [ ] telefunken – Telefunken: der Weltmarke ging der Saft aus
+- [ ] aeg – AEG: Elektro-Pionier zerfällt
+- [ ] karstadt – Karstadt / Galeria: Kaufhaus-Sterben in drei Akten
+- [ ] praktiker – Praktiker: "20 Prozent auf alles" – außer Tiernahrung
+- [ ] loewe – Loewe: die Fernseh-Legende und ihre Pleiten
