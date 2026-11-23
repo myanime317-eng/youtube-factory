@@ -9,8 +9,7 @@
    "tags": "[calm]",
    "mood": "calm",
    "shots": [
-    "s001",
-    "s002"
+    "s001"
    ],
    "music": "intro",
    "overlays": [
@@ -93,7 +92,6 @@
    "tags": "[dramatic]",
    "mood": "shock",
    "shots": [
-    "s010",
     {
      "graphic": "chart",
      "label": "Aktienkurs Wirecard (EUR)",
@@ -282,7 +280,6 @@
    "tags": "[calm]",
    "mood": "calm",
    "shots": [
-    "s021",
     "s022",
     "s023"
    ]
@@ -293,7 +290,6 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s024",
     "s025"
    ],
    "sfx": [
@@ -378,7 +374,6 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s035",
     "s036"
    ]
   },
@@ -415,7 +410,6 @@
    "mood": "rise",
    "shots": [
     "s041",
-    "s042",
     {
      "graphic": "timeline",
      "events": [
@@ -453,8 +447,7 @@
    "tags": "[impressed]",
    "mood": "rise",
    "shots": [
-    "s043",
-    "s044"
+    "s043"
    ]
   },
   {
@@ -463,8 +456,7 @@
    "tags": "[calm]",
    "mood": "rise",
    "shots": [
-    "s045",
-    "s046"
+    "s045"
    ]
   },
   {
@@ -473,8 +465,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s047",
-    "s048"
+    "s047"
    ]
   },
   {
@@ -572,8 +563,7 @@
      ],
      "peak": 14,
      "peak_label": "SEP 2018"
-    },
-    "s050"
+    }
    ],
    "chapter": {
     "n": 2,
@@ -607,8 +597,7 @@
      ],
      "caption": "Übernahmen in Asien und im Nahen Osten"
     },
-    "s051",
-    "s052"
+    "s051"
    ]
   },
   {
@@ -617,8 +606,7 @@
    "tags": "[curious]",
    "mood": "rise",
    "shots": [
-    "s053",
-    "s054"
+    "s053"
    ],
    "overlays": [
     {
@@ -637,8 +625,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s055",
-    "s056"
+    "s055"
    ]
   },
   {
@@ -647,8 +634,7 @@
    "tags": "[impressed]",
    "mood": "rise",
    "shots": [
-    "s057",
-    "s058"
+    "s057"
    ]
   },
   {
@@ -673,8 +659,7 @@
    "tags": "[impressed]",
    "mood": "rise",
    "shots": [
-    "s060",
-    "s061"
+    "s060"
    ],
    "overlays": [
     {
@@ -697,8 +682,7 @@
    "tags": "[impressed]",
    "mood": "rise",
    "shots": [
-    "s062",
-    "s063"
+    "s062"
    ],
    "overlays": [
     {
@@ -723,8 +707,7 @@
    "tags": "[calm]",
    "mood": "rise",
    "shots": [
-    "s064",
-    "s065"
+    "s064"
    ]
   },
   {
@@ -733,8 +716,7 @@
    "tags": "[impressed]",
    "mood": "rise",
    "shots": [
-    "s066",
-    "s067"
+    "s066"
    ],
    "overlays": [
     {
@@ -762,8 +744,7 @@
    "tags": "[ominous]",
    "mood": "tension",
    "shots": [
-    "s069",
-    "s070"
+    "s069"
    ],
    "music": "tension"
   },
@@ -773,8 +754,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s071",
-    "s072"
+    "s071"
    ],
    "chapter": {
     "n": 3,
@@ -810,8 +790,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s074",
-    "s075"
+    "s074"
    ]
   },
   {
@@ -829,8 +808,6 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s077",
-    "s078",
     {
      "graphic": "card",
      "name": "Dan McCrum",
@@ -846,9 +823,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s079",
-    "s080",
-    "s081"
+    "s079"
    ],
    "overlays": [
     {
@@ -864,8 +839,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s082",
-    "s083"
+    "s082"
    ]
   },
   {
@@ -874,8 +848,7 @@
    "tags": "[ominous]",
    "mood": "tension",
    "shots": [
-    "s084",
-    "s085"
+    "s084"
    ],
    "sfx": [
     {
@@ -890,8 +863,7 @@
    "tags": "[slowly]",
    "mood": "tension",
    "shots": [
-    "s086",
-    "s087"
+    "s086"
    ]
   },
   {
@@ -900,8 +872,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s088",
-    "s089"
+    "s088"
    ],
    "sfx": [
     {
@@ -916,8 +887,7 @@
    "tags": "[surprised]",
    "mood": "reveal",
    "shots": [
-    "s090",
-    "s091"
+    "s090"
    ]
   },
   {
@@ -926,8 +896,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s092",
-    "s093"
+    "s092"
    ],
    "overlays": [
     {
@@ -950,8 +919,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s094",
-    "s095"
+    "s094"
    ]
   },
   {
@@ -980,8 +948,7 @@
      ],
      "caption": "Drittpartner-Geschäft: Dubai, Singapur, Philippinen"
     },
-    "s096",
-    "s097"
+    "s096"
    ]
   },
   {
@@ -990,8 +957,7 @@
    "tags": "[slowly]",
    "mood": "reveal",
    "shots": [
-    "s098",
-    "s099"
+    "s098"
    ],
    "sfx": [
     {
@@ -1020,8 +986,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s100",
-    "s101"
+    "s100"
    ]
   },
   {
@@ -1057,8 +1022,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s103",
-    "s104"
+    "s103"
    ]
   },
   {
@@ -1072,8 +1036,7 @@
      "title": "Keine Belege?",
      "sub": "Wirecard nach dem KPMG-Bericht, April 2020"
     },
-    "s105",
-    "s106"
+    "s105"
    ],
    "sfx": [
     {
@@ -1088,8 +1051,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s107",
-    "s108"
+    "s107"
    ],
    "overlays": [
     {
@@ -1125,8 +1087,7 @@
       "PHL"
      ],
      "caption": "Die Konten auf den Philippinen gibt es nicht"
-    },
-    "s110"
+    }
    ],
    "overlays": [
     {
@@ -1148,8 +1109,7 @@
    "tags": "[serious]",
    "mood": "shock",
    "shots": [
-    "s111",
-    "s112"
+    "s111"
    ],
    "sfx": [
     {
@@ -1168,8 +1128,7 @@
    "tags": "[serious]",
    "mood": "shock",
    "shots": [
-    "s113",
-    "s114"
+    "s113"
    ]
   },
   {
@@ -1178,8 +1137,7 @@
    "tags": "[serious]",
    "mood": "tension",
    "shots": [
-    "s115",
-    "s116"
+    "s115"
    ],
    "overlays": [
     {
@@ -1204,8 +1162,7 @@
    "tags": "[dramatic]",
    "mood": "shock",
    "shots": [
-    "s118",
-    "s119"
+    "s118"
    ],
    "overlays": [
     {
@@ -1232,7 +1189,6 @@
    "tags": "[sad]",
    "mood": "reflective",
    "shots": [
-    "s120",
     {
      "graphic": "timeline",
      "events": [
@@ -1639,7 +1595,7 @@
   ],
   "accent": "WEG?",
   "accent_color": "yellow",
-  "inset": "s010",
+  "inset": "s011",
   "text_pos": "bottom_left"
  },
  "shorts": [

@@ -10,11 +10,6 @@
    "prompt": "Early morning aerial view of a modern glass office headquarters in a quiet business park near Munich, Alps faintly on the horizon, wet roads"
   },
   {
-   "id": "s002",
-   "line": "l001",
-   "prompt": "Empty corporate lobby at dawn, polished floor, a security guard silhouette, cold light"
-  },
-  {
    "id": "s003",
    "line": "l002",
    "prompt": "Glass-walled conference room, several businessmen in suits seen from behind waiting around a long table, tense"
@@ -48,11 +43,6 @@
    "id": "s009",
    "line": "l005",
    "prompt": "An empty open bank vault, heavy round steel door swung open, bare metal shelves with nothing on them, cold blue light, dust in the air"
-  },
-  {
-   "id": "s010",
-   "line": "l006",
-   "prompt": "A German newspaper on a café table, front page with the giant bold headline WIRECARD PLEITE, a cup of coffee beside it, morning light"
   },
   {
    "id": "s011",
@@ -105,11 +95,6 @@
    "prompt": "Hands typing credit card details into an early online checkout form on an old computer screen"
   },
   {
-   "id": "s021",
-   "line": "l012",
-   "prompt": "Close-up of a hand holding a credit card in front of a laptop, online shopping, warm light"
-  },
-  {
    "id": "s022",
    "line": "l012",
    "prompt": "Abstract visualization of glowing money transfer lines between a shop icon and a bank building, dark background"
@@ -118,11 +103,6 @@
    "id": "s023",
    "line": "l012",
    "prompt": "Close-up of a card payment terminal printing a receipt"
-  },
-  {
-   "id": "s024",
-   "line": "l013",
-   "prompt": "A trading screen from the early 2000s showing a collapsing tech index in red, dim office"
   },
   {
    "id": "s025",
@@ -175,11 +155,6 @@
    "prompt": "Extreme close-up detail shot from this scene, different angle: A young man in a sharp suit seen from behind walking through a corridor of an office building, confident stride, cold light"
   },
   {
-   "id": "s035",
-   "line": "l019",
-   "prompt": "Airport business lounge at night with a lone traveler silhouette and a wall of departure boards"
-  },
-  {
    "id": "s036",
    "line": "l019",
    "prompt": "A passport with many visa stamps on a hotel desk next to a phone, close-up"
@@ -210,19 +185,9 @@
    "prompt": "The Frankfurt Stock Exchange building facade with flags at golden hour"
   },
   {
-   "id": "s042",
-   "line": "l022",
-   "prompt": "A classic German bank branch interior at night, marble counters, empty"
-  },
-  {
    "id": "s043",
    "line": "l023",
    "prompt": "A framed official banking license document on a wall in a modern office, soft spotlight"
-  },
-  {
-   "id": "s044",
-   "line": "l023",
-   "prompt": "Futuristic fintech office with glowing screens and transaction dashboards, blue and gold light"
   },
   {
    "id": "s045",
@@ -230,19 +195,9 @@
    "prompt": "A shopkeeper in a German bakery handing a customer a card terminal, warm morning light, faces not visible"
   },
   {
-   "id": "s046",
-   "line": "l024",
-   "prompt": "Close-up of a branded-free prepaid debit card on a dark surface, gold rim light"
-  },
-  {
    "id": "s047",
    "line": "l025",
    "prompt": "A shareholders meeting in a large hall in the late 2000s, a critical speaker at a microphone seen from behind"
-  },
-  {
-   "id": "s048",
-   "line": "l025",
-   "prompt": "Close-up of an annual report with sticky notes and question marks written in the margins"
   },
   {
    "id": "s049",
@@ -250,19 +205,9 @@
    "prompt": "Time-lapse feeling: a modern office tower at night with more and more windows lighting up, long exposure"
   },
   {
-   "id": "s050",
-   "line": "l026",
-   "prompt": "Extreme close-up detail shot from this scene, different angle: Time-lapse feeling: a modern office tower at night with more and more windows lighting up, long exposure"
-  },
-  {
    "id": "s051",
    "line": "l027",
    "prompt": "Singapore skyline at night with financial district towers, reflections on the water"
-  },
-  {
-   "id": "s052",
-   "line": "l027",
-   "prompt": "Dubai skyline at dusk with glittering skyscrapers, hazy gold light"
   },
   {
    "id": "s053",
@@ -270,29 +215,14 @@
    "prompt": "A busy street in Mumbai at dusk with neon signs and traffic, cinematic"
   },
   {
-   "id": "s054",
-   "line": "l028",
-   "prompt": "A signing ceremony in a hotel conference room, hands shaking over a table with contracts, faces not visible"
-  },
-  {
    "id": "s055",
    "line": "l029",
    "prompt": "Money transfer arrows on a dark world map glowing between Europe, Mauritius and India, abstract"
   },
   {
-   "id": "s056",
-   "line": "l029",
-   "prompt": "A bank statement with large outgoing transfers highlighted in yellow marker, close-up"
-  },
-  {
    "id": "s057",
    "line": "l030",
    "prompt": "Financial analysts in a bright trading room celebrating in front of rising green charts, seen from behind"
-  },
-  {
-   "id": "s058",
-   "line": "l030",
-   "prompt": "Silicon Valley style campus with glass buildings and palm trees at sunset, aerial view"
   },
   {
    "id": "s059",
@@ -305,19 +235,9 @@
    "prompt": "The trading floor of the Frankfurt Stock Exchange with a giant illuminated index board, warm golden light, traders as silhouettes"
   },
   {
-   "id": "s061",
-   "line": "l032",
-   "prompt": "A classic old bank tower in Frankfurt at dusk, slightly dimmed lights, melancholic mood"
-  },
-  {
    "id": "s062",
    "line": "l033",
    "prompt": "Huge stacks of 500 euro banknotes on a dark glass table in a luxury boardroom, golden light"
-  },
-  {
-   "id": "s063",
-   "line": "l033",
-   "prompt": "Glass skyscrapers of Frankfurt's banking district at sunset seen from below, towering and powerful, lens flare"
   },
   {
    "id": "s064",
@@ -325,19 +245,9 @@
    "prompt": "A tech conference stage with a speaker silhouette backlit by a huge screen reading DIE ZUKUNFT DES BEZAHLENS, large audience"
   },
   {
-   "id": "s065",
-   "line": "l034",
-   "prompt": "A smartphone making a contactless payment at a modern café counter, close-up"
-  },
-  {
    "id": "s066",
    "line": "l035",
    "prompt": "Tokyo skyline at night with glowing towers, cinematic, rain on glass"
-  },
-  {
-   "id": "s067",
-   "line": "l035",
-   "prompt": "A huge investment agreement document on a table with two pens, one Japanese and one German flag in the background softly blurred"
   },
   {
    "id": "s068",
@@ -350,19 +260,9 @@
    "prompt": "A lone person in a dark apartment studying financial documents spread across the floor, desk lamp, night"
   },
   {
-   "id": "s070",
-   "line": "l037",
-   "prompt": "Close-up of an eye reflected in a laptop screen showing financial tables"
-  },
-  {
    "id": "s071",
    "line": "l038",
    "prompt": "A stack of critical research reports on a desk, one titled LEERVERKÄUFER-REPORT with red markings"
-  },
-  {
-   "id": "s072",
-   "line": "l038",
-   "prompt": "Dim office of an investment fund at night, screens with falling stock charts"
   },
   {
    "id": "s073",
@@ -375,24 +275,9 @@
    "prompt": "A red stock chart on a large screen dropping sharply, dark room, red glow"
   },
   {
-   "id": "s075",
-   "line": "l040",
-   "prompt": "A corporate press release on a desk with a heading DEMENTI, fountain pen beside it"
-  },
-  {
    "id": "s076",
    "line": "l041",
    "prompt": "A green stock chart recovering upward on a trading screen, relieved traders in the background, warm light"
-  },
-  {
-   "id": "s077",
-   "line": "l042",
-   "prompt": "A newsroom of a major London newspaper at night, rows of desks, one journalist silhouette working late"
-  },
-  {
-   "id": "s078",
-   "line": "l042",
-   "prompt": "Close-up of a reporter's notebook with handwritten notes and the word WIRECARD underlined"
   },
   {
    "id": "s079",
@@ -400,24 +285,9 @@
    "prompt": "Singapore office tower at night with a few lit windows, rain"
   },
   {
-   "id": "s080",
-   "line": "l043",
-   "prompt": "A whistleblower's hand sliding a USB stick across a café table, close-up, moody"
-  },
-  {
-   "id": "s081",
-   "line": "l043",
-   "prompt": "A newspaper front page in pink paper on a desk with a headline about Wirecard Singapore"
-  },
-  {
    "id": "s082",
    "line": "l044",
    "prompt": "Old newspaper clippings pinned to a board with handwritten question marks, dim light"
-  },
-  {
-   "id": "s083",
-   "line": "l044",
-   "prompt": "Extreme close-up detail shot from this scene, different angle: Old newspaper clippings pinned to a board with handwritten question marks, dim light"
   },
   {
    "id": "s084",
@@ -425,19 +295,9 @@
    "prompt": "A man in a parked car at night watching an apartment building through binoculars, seen from behind"
   },
   {
-   "id": "s085",
-   "line": "l045",
-   "prompt": "A laptop screen in a dark room showing a suspicious phishing email warning, red glow"
-  },
-  {
    "id": "s086",
    "line": "l046",
    "prompt": "Close-up of a hand changing a date on a printed contract with a pen, harsh lamp light"
-  },
-  {
-   "id": "s087",
-   "line": "l046",
-   "prompt": "Abstract glowing money flow arrows going in a circle between three bank buildings, dark background"
   },
   {
    "id": "s088",
@@ -445,19 +305,9 @@
    "prompt": "Police officers in Singapore entering a modern office tower lobby, seen from behind, evening"
   },
   {
-   "id": "s089",
-   "line": "l047",
-   "prompt": "Boxes of seized documents being carried out of an office, motion blur"
-  },
-  {
    "id": "s090",
    "line": "l048",
    "prompt": "A German government agency building facade at dusk, serious, cold light"
-  },
-  {
-   "id": "s091",
-   "line": "l048",
-   "prompt": "Investigators' desk with a folder labeled MARKTMANIPULATION and photos of newspaper articles"
   },
   {
    "id": "s092",
@@ -465,19 +315,9 @@
    "prompt": "The BaFin building in Bonn or Frankfurt, modern office facade, overcast day"
   },
   {
-   "id": "s093",
-   "line": "l049",
-   "prompt": "An official stamped decree on a desk with a red seal and the word VERBOT"
-  },
-  {
    "id": "s094",
    "line": "l050",
    "prompt": "A prosecutor's office corridor in Munich with file cabinets, cold fluorescent light"
-  },
-  {
-   "id": "s095",
-   "line": "l050",
-   "prompt": "A journalist silhouette standing in rain outside a newspaper building at night"
   },
   {
    "id": "s096",
@@ -485,29 +325,14 @@
    "prompt": "A nondescript small office door in a dusty Dubai side street, no signage, harsh sun"
   },
   {
-   "id": "s097",
-   "line": "l051",
-   "prompt": "Extreme close-up detail shot from this scene, different angle: A nondescript small office door in a dusty Dubai side street, no signage, harsh sun"
-  },
-  {
    "id": "s098",
    "line": "l052",
    "prompt": "A tiny empty office room with one desk and a dusty computer, blinds half closed"
   },
   {
-   "id": "s099",
-   "line": "l052",
-   "prompt": "A residential house in Manila with a small mailbox, no company sign, afternoon heat"
-  },
-  {
    "id": "s100",
    "line": "l054",
    "prompt": "A team of auditors in a glass meeting room with stacks of binders, late evening"
-  },
-  {
-   "id": "s101",
-   "line": "l054",
-   "prompt": "Close-up of hands flipping through thick folders of transaction records"
   },
   {
    "id": "s102",
@@ -520,19 +345,9 @@
    "prompt": "Empty file shelves in an archive room with a few scattered papers, cold light"
   },
   {
-   "id": "s104",
-   "line": "l056",
-   "prompt": "Close-up of a document with large blank sections where numbers should be"
-  },
-  {
    "id": "s105",
    "line": "l057",
    "prompt": "A red stock chart plunging on multiple trading screens, dark trading room, red glow on faces seen from behind"
-  },
-  {
-   "id": "s106",
-   "line": "l057",
-   "prompt": "Extreme close-up detail shot from this scene, different angle: A red stock chart plunging on multiple trading screens, dark trading room, red glow on faces seen from behind"
   },
   {
    "id": "s107",
@@ -540,19 +355,9 @@
    "prompt": "Two official bank confirmation letters on a dark wooden table, magnifying glass beside them, dramatic side light"
   },
   {
-   "id": "s108",
-   "line": "l058",
-   "prompt": "Extreme close-up detail shot from this scene, different angle: Two official bank confirmation letters on a dark wooden table, magnifying glass beside them, dramatic side light"
-  },
-  {
    "id": "s109",
    "line": "l059",
    "prompt": "Two bank confirmation letters on a table, the top one stamped with a large red stamp reading GEFÄLSCHT, magnifying glass, harsh light"
-  },
-  {
-   "id": "s110",
-   "line": "l059",
-   "prompt": "Extreme close-up detail shot from this scene, different angle: Two bank confirmation letters on a table, the top one stamped with a large red stamp reading GEFÄLSCHT, magnifying glass, harsh light"
   },
   {
    "id": "s111",
@@ -560,29 +365,14 @@
    "prompt": "Press photographers with flashes outside a corporate building at night, motion blur"
   },
   {
-   "id": "s112",
-   "line": "l060",
-   "prompt": "Police car with blue lights in front of a modern villa at dawn, light rain"
-  },
-  {
    "id": "s113",
    "line": "l061",
    "prompt": "A corporate statement printed on paper lying on a dark desk, a single sentence highlighted in red marker, harsh light"
   },
   {
-   "id": "s114",
-   "line": "l061",
-   "prompt": "Extreme close-up detail shot from this scene, different angle: A corporate statement printed on paper lying on a dark desk, a single sentence highlighted in red marker, harsh light"
-  },
-  {
    "id": "s115",
    "line": "l062",
    "prompt": "A prison corridor in Germany with heavy doors, cold fluorescent light, empty"
-  },
-  {
-   "id": "s116",
-   "line": "l062",
-   "prompt": "A bail document and a bank transfer slip on a lawyer's desk, close-up"
   },
   {
    "id": "s117",
@@ -593,16 +383,6 @@
    "id": "s118",
    "line": "l064",
    "prompt": "A corporate company sign on a glass building being dimmed at night, letters going dark, symbolic"
-  },
-  {
-   "id": "s119",
-   "line": "l064",
-   "prompt": "Office staff carrying cardboard boxes out of a glass office building, seen from behind, grey day"
-  },
-  {
-   "id": "s120",
-   "line": "l065",
-   "prompt": "The stock exchange index board with one empty dark slot among glowing tickers, symbolic"
   },
   {
    "id": "s121",
