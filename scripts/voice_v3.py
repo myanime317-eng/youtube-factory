@@ -22,11 +22,34 @@ def post_json(path, body):
         return r.read()
 
 
-audio = post_json(f"/v1/text-to-speech/{voice_id}?output_format=mp3_44100_192", {
-    "text": tagged, "model_id": "eleven_v3", "language_code": "de",
-    "voice_settings": {"stability": 0.5, "similarity_boost": 0.8, "use_speaker_boost": True},
-})
-open(out + ".mp3", "wb").write(audio)
+# Eleven v3 takes a limited amount of text per request: narrate in parts of whole lines, then join.
+LIMIT = 2400
+parts, cur = [], []
+for l in lines:
+    t = (l.get("tags", "") + " " + l["text"]).strip()
+    if cur and sum(len(x) + 2 for x in cur) + len(t) > LIMIT:
+        parts.append(cur)
+        cur = []
+    cur.append(t)
+if cur:
+    parts.append(cur)
+import subprocess, tempfile
+tmpd = tempfile.mkdtemp()
+files = []
+for n, p in enumerate(parts):
+    a = post_json(f"/v1/text-to-speech/{voice_id}?output_format=mp3_44100_192", {
+        "text": "\n\n".join(p), "model_id": "eleven_v3", "language_code": "de",
+        "voice_settings": {"stability": 0.5, "similarity_boost": 0.8, "use_speaker_boost": True},
+    })
+    f = os.path.join(tmpd, f"p{n:03d}.mp3")
+    open(f, "wb").write(a)
+    files.append(f)
+    print("tts part", n + 1, "/", len(parts), len(a), flush=True)
+lst = os.path.join(tmpd, "l.txt")
+open(lst, "w").write("".join(f"file '{f}'\n" for f in files))
+subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-af", "apad=pad_dur=0.0",
+                "-c:a", "libmp3lame", "-b:a", "192k", out + ".mp3"], check=True)
+audio = open(out + ".mp3", "rb").read()
 print("tts ok", len(audio))
 
 # forced alignment: multipart upload of the audio + the plain text
