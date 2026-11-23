@@ -1,0 +1,13 @@
+{
+ "produced": "2026-11-23T17:18:10.705849+00:00",
+ "release": "ep-wirecard",
+ "episode_seconds": 789.22,
+ "queued": [
+  "wirecard-episode",
+  "wirecard-short1",
+  "wirecard-short2",
+  "wirecard-short3",
+  "wirecard-short4",
+  "wirecard-short5"
+ ]
+}
