@@ -1,4 +1,4 @@
-# v3: new Creator key
+# v4: music library
 """Build the channel's sound kit with ElevenLabs: sound effects and (if the plan allows) a music bed.
 
 Writes assets/sound/<name>.mp3 and assets/sound/report.json. Existing files are kept, so it only
@@ -27,7 +27,16 @@ SFX = {
     "jet_1": ("Private jet taking off and roaring past, rain on runway", 5.0),
     "glitch_1": ("Short digital glitch and stock ticker data crash sound", 1.5),
 }
+MUSIC_LEN = 180000  # 3 minutes; the editor loops and crossfades
 MUSIC = {
+    "music_intro_1": "Cold open for a business true-crime documentary: low ominous drones, distant ticking clock, subtle pulses, "
+                     "suspenseful and expensive-sounding, slowly building, instrumental, no drums",
+    "music_tension_1": "Investigative tension underscore, steady pulsing synth bass, ticking percussion, string ostinato, "
+                       "something is wrong behind the numbers, modern documentary score, instrumental",
+    "music_collapse_1": "Dramatic collapse music, heavy low brass and booming percussion, dark strings, sense of downfall and scandal, "
+                        "cinematic documentary score, instrumental",
+    "music_reflective_1": "Reflective melancholic piano with soft strings and warm pads, aftermath and lessons learned, "
+                          "slow tempo, documentary ending, instrumental",
     "music_dark_1": "Dark cinematic documentary underscore, slow pulsing low synth, sparse piano notes, tense strings, "
                     "investigative mood like a true-crime business documentary, no drums at the start, builds slowly, instrumental",
     "music_rise_1": "Uplifting yet suspicious corporate success music, steady modern pulse, warm synths, subtle tension underneath, "
@@ -63,7 +72,7 @@ for name, prompt in MUSIC.items():
         continue
     try:
         audio = post("https://api.elevenlabs.io/v1/music?output_format=mp3_44100_192",
-                     {"prompt": prompt, "music_length_ms": 75000, "force_instrumental": True})
+                     {"prompt": prompt, "music_length_ms": MUSIC_LEN if name not in ("music_dark_1", "music_rise_1") else 75000, "force_instrumental": True})
         open(path, "wb").write(audio)
         report[name] = f"ok {len(audio)}"
     except urllib.error.HTTPError as e:
