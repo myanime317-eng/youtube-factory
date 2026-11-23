@@ -1,25 +1,61 @@
 {
- "made": "2026-11-23T07:48:18.222Z",
+ "made": "2026-11-23T08:01:53.678Z",
  "results": {
-  "s01": "missing",
-  "s02": "missing",
-  "s03": "missing",
-  "s04": "missing",
-  "s05": "missing",
-  "s06": "missing",
-  "s07": "missing",
-  "s08": "missing",
-  "s09": "missing",
-  "s10": "missing",
-  "s11": "missing",
-  "s12": "missing",
-  "s13": "missing",
-  "s14": "missing",
-  "s15": "missing",
-  "s16": "missing",
-  "s17": "missing",
-  "s18": "missing",
-  "s19": "missing",
-  "s20": "missing"
- }
+  "s01": "flow",
+  "s02": "flow",
+  "s03": "flow",
+  "s04": "flow",
+  "s05": "flow",
+  "s06": "flow",
+  "s07": "flow",
+  "s08": "flow",
+  "s09": "flow",
+  "s10": "flow",
+  "s11": "flow",
+  "s12": "flow",
+  "s13": "flow",
+  "s14": "flow",
+  "s15": "flow",
+  "s16": "flow",
+  "s17": "flow",
+  "s18": "flow",
+  "s19": "flow",
+  "s20": "flow"
+ },
+ "flow_jobs": [
+  {
+   "status": "done",
+   "note": "20 of 20 scenes came from the agent",
+   "files": [
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-01.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-02.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-03.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-04.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-05.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-06.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-07.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-08.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-09.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-10.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-11.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-12.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-13.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-14.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-15.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-16.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-17.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-18.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-19.png",
+    "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test\\scene-20.png"
+   ],
+   "project": "C:\\Users\\Garv\\flow-mcp-out\\Firmenfriedhof_Wirecard_Test"
+  },
+  {
+   "flow_state": {
+    "url": "https://flow.google.com/project/0708e60e-ea00-4d39-b408-be03223dffb4",
+    "signedIn": true,
+    "inProject": true
+   }
+  }
+ ]
 }
