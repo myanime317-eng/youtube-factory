@@ -128,7 +128,7 @@ async function runJob({ file, spec }) {
     // own folder per batch, so file numbers scene-01.. match this batch's scene order exactly
     const queued = await c.agent({
       project: `${name}_${Date.now()}`,
-      scenes: part.map((s) => `${s.prompt.replace(/\.?$/, ".")}${style}`),
+      scenes: part.map((s) => `Still image (photo, not a video): ${s.prompt.replace(/\.?$/, ".")}${style}`),
       aspect_ratio: spec.aspect_ratio ?? "16:9",
       download_quality: "upscaled",
     });
