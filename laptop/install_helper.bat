@@ -37,6 +37,8 @@ set "VBS=%STARTUP%\firmenfriedhof-helper.vbs"
 >> "%VBS%" echo sh.Run "cmd /c node ""%USERPROFILE%\youtube-factory\laptop\helper.mjs""", 0, False
 
 echo  [4/4] Starting the helper now...
+powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \"Name='node.exe'\" | Where-Object { $_.CommandLine -like '*youtube-factory*helper.mjs*' } | Invoke-CimMethod -Name Terminate | Out-Null"
+timeout /t 2 /nobreak >nul
 wscript "%VBS%"
 
 echo.

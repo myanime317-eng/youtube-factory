@@ -2,7 +2,7 @@
 // Runs quietly whenever the laptop is on. Every few minutes it pulls the youtube-factory repo, looks for
 // image jobs (any image_prompts.json with a "flow_out" folder that has no DONE file), makes the images in
 // Google Flow (Nano Banana, 0 credits) through flow-mcp, copies them into the repo and pushes them back.
-import { spawnSync } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
 import { createServer } from "node:net";
 import { appendFileSync, copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { homedir } from "node:os";
@@ -30,12 +30,17 @@ const git = (...args) => {
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-// One helper at a time: hold a local port as a lock.
-await new Promise((ok) => {
-  const s = createServer();
-  s.once("error", () => { log("Another helper is already running. Exiting."); process.exit(0); });
-  s.listen(8799, "127.0.0.1", ok);
-});
+// One helper at a time: hold a local port as a lock (a restarting helper gets a few tries).
+for (let tryNo = 0; ; tryNo++) {
+  const ok = await new Promise((done) => {
+    const s = (globalThis.__lock = createServer());
+    s.once("error", () => done(false));
+    s.listen(8799, "127.0.0.1", () => done(true));
+  });
+  if (ok) break;
+  if (tryNo >= 5) { log("Another helper is already running. Exiting."); process.exit(0); }
+  await sleep(3000);
+}
 
 const imp = (f) => import(pathToFileURL(join(FLOW, "dist", f)).href);
 const { LocalCore } = await imp("core.js");
@@ -100,6 +105,7 @@ async function runJob({ file, spec }) {
   const style = spec.style ? ` ${spec.style.replace(/\.?$/, ".")}` : "";
   const name = spec.flow_project ?? spec.flow_out.replace(/[^\w]+/g, "_");
   const results = {};
+  const report = [];
   // Flow's agent takes up to 50 scenes per batch.
   for (let start = 0; start < shots.length; start += 40) {
     const part = shots.slice(start, start + 40);
@@ -118,6 +124,8 @@ async function runJob({ file, spec }) {
     }
     const files = done.jobs.flatMap((j) => j.files ?? []).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).sort();
     done.jobs.forEach((j) => j.error && log("Flow error:", j.error));
+    report.push(...done.jobs.map((j) => ({ status: j.status, error: j.error, note: j.note, progress: j.progress, failed_scenes: j.failed_scenes, files: j.files, project: j.project })));
+    try { const st = await c.status({ detailed: false }); report.push({ flow_state: st.flow }); } catch (e) { report.push({ status_error: e.message }); }
     part.forEach((s, k) => {
       const f = files[k];
       if (!f) { results[s.id] = "missing"; return; }
@@ -126,7 +134,8 @@ async function runJob({ file, spec }) {
     });
   }
   const missing = Object.entries(results).filter(([, v]) => v !== "flow").map(([k]) => k);
-  writeFileSync(join(out, "log.json"), JSON.stringify({ made: new Date().toISOString(), results }, null, 1));
+  writeFileSync(join(out, "log.json"), JSON.stringify({ made: new Date().toISOString(), results, flow_jobs: report }, null, 1));
+  writeFileSync(join(out, "helper_log.txt"), tailLog());
   if (!missing.length) writeFileSync(join(out, "DONE"), new Date().toISOString());
   git("add", spec.flow_out);
   try { git("commit", "-m", `Flow images: ${spec.flow_out}${missing.length ? ` (missing ${missing.join(",")})` : ""}`); } catch {}
@@ -135,11 +144,30 @@ async function runJob({ file, spec }) {
   log(`Pushed ${Object.keys(results).length - missing.length} images to ${spec.flow_out}` + (missing.length ? `, missing ${missing}` : ""));
 }
 
+function tailLog() {
+  try { return readFileSync(LOG, "utf8").split("\n").slice(-150).join("\n"); } catch { return ""; }
+}
+
+// Restart with the new code when the helper itself was updated on GitHub.
+const SELF = join(REPO, "laptop", "helper.mjs");
+const selfStamp = () => { try { return readFileSync(SELF, "utf8").length + ":" + statSync(SELF).mtimeMs; } catch { return ""; } };
+let myStamp = selfStamp();
+function restartIfUpdated() {
+  if (selfStamp() === myStamp) return;
+  log("Helper code updated, restarting.");
+  try { globalThis.__lock.close(); } catch {}
+  const child = spawn(process.execPath, [SELF], { cwd: REPO, detached: true, stdio: "ignore", windowsHide: true });
+  child.unref();
+  setTimeout(() => process.exit(0), 500);
+  return true;
+}
+
 const failures = new Map();
 log("Helper started.");
 for (;;) {
   try {
     git("pull", "--rebase");
+    if (restartIfUpdated()) { await sleep(5000); continue; }
     for (const job of findJobs()) {
       if ((failures.get(job.file) ?? 0) >= 3) continue;
       try { await runJob(job); failures.delete(job.file); }
