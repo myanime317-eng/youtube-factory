@@ -1,14 +1,59 @@
 {
-  "title": "Wirecard: Die Firma, die es nie gab",
-  "lines": [
-    {"id": "l01", "mood": "calm",    "text": "Im September zweitausendachtzehn ist ein Zahlungsdienstleister aus einem Vorort von München fast fünfundzwanzig Milliarden Euro wert."},
-    {"id": "l02", "mood": "rise",    "text": "Er verdrängt die Commerzbank aus dem DAX. Und steht plötzlich neben Siemens, Volkswagen und der Deutschen Bank."},
-    {"id": "l03", "mood": "tension", "text": "Keine zwei Jahre später, am achtzehnten Juni zweitausendzwanzig, fehlen in der Bilanz eins Komma neun Milliarden Euro."},
-    {"id": "l04", "mood": "shock",   "text": "Einfach weg."},
-    {"id": "l05", "mood": "tension", "text": "Die Prüfer finden das Geld nicht. Die Banken auch nicht. Und bald ist klar: Es hat vermutlich nie existiert."},
-    {"id": "l06", "mood": "shock",   "text": "Eine Woche später ist Wirecard pleite. Als erstes DAX-Unternehmen der Geschichte."},
-    {"id": "l07", "mood": "tension", "text": "Der Chef wird festgenommen. Ein Vorstand flieht im Privatjet. Und wird bis heute gesucht."},
-    {"id": "l08", "mood": "reveal",  "text": "Wie konnte eine einzige Firma Anleger, Aufsicht und Politik jahrelang täuschen?"},
-    {"id": "l09", "mood": "title",   "text": "Das ist die Geschichte von Wirecard."}
-  ]
+ "title": "Wirecard: Die Firma, die es nie gab",
+ "lines": [
+  {
+   "id": "l01",
+   "mood": "calm",
+   "text": "Im September zweitausendachtzehn ist ein Zahlungsdienstleister aus einem Vorort von München fast fünfundzwanzig Milliarden Euro wert.",
+   "tags": "[calm]"
+  },
+  {
+   "id": "l02",
+   "mood": "rise",
+   "text": "Er verdrängt die Commerzbank aus dem DAX. Und steht plötzlich neben Siemens, Volkswagen und der Deutschen Bank.",
+   "tags": "[impressed]"
+  },
+  {
+   "id": "l03",
+   "mood": "tension",
+   "text": "Keine zwei Jahre später, am achtzehnten Juni zweitausendzwanzig, fehlen in der Bilanz eins Komma neun Milliarden Euro.",
+   "tags": "[serious]"
+  },
+  {
+   "id": "l04",
+   "mood": "shock",
+   "text": "Einfach weg.",
+   "tags": "[whispers]"
+  },
+  {
+   "id": "l05",
+   "mood": "tension",
+   "text": "Die Prüfer finden das Geld nicht. Die Banken auch nicht. Und bald ist klar: Es hat vermutlich nie existiert.",
+   "tags": "[slowly]"
+  },
+  {
+   "id": "l06",
+   "mood": "shock",
+   "text": "Eine Woche später ist Wirecard pleite. Als erstes DAX-Unternehmen der Geschichte.",
+   "tags": "[dramatic]"
+  },
+  {
+   "id": "l07",
+   "mood": "tension",
+   "text": "Der Chef wird festgenommen. Ein Vorstand flieht im Privatjet. Und wird bis heute gesucht.",
+   "tags": "[serious]"
+  },
+  {
+   "id": "l08",
+   "mood": "reveal",
+   "text": "Wie konnte eine einzige Firma Anleger, Aufsicht und Politik jahrelang täuschen?",
+   "tags": "[curious]"
+  },
+  {
+   "id": "l09",
+   "mood": "title",
+   "text": "Das ist die Geschichte von Wirecard.",
+   "tags": "[ominous]"
+  }
+ ]
 }

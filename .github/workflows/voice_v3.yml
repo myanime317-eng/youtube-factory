@@ -1,0 +1,25 @@
+name: Voice v3
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/voice_v3.py"
+permissions:
+  contents: write
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Narrate
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/voice_v3.py test/script_wirecard_test.json kkJxCnlRCckmfFvzDW5Q test/out/alexander_v3
+      - name: Save
+        run: |
+          git config user.name "firmenfriedhof-robot"
+          git config user.email "robot@users.noreply.github.com"
+          git add test/out
+          git commit -m "Voice v3 (Alexander, emotion tags)" || echo "nothing"
+          git pull --rebase && git push
