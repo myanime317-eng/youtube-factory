@@ -9,19 +9,27 @@
  "results": [
   {
    "n": 1,
-   "name": "George - Warm, Captivating Storyteller",
-   "voice_id": "JBFqnCBsd6RMkjVDRZzb",
-   "descriptive": "mature",
+   "name": "Alexander - Deep TV Narrator",
+   "voice_id": "kkJxCnlRCckmfFvzDW5Q",
+   "descriptive": "pleasant",
    "age": "middle_aged",
-   "accent": "british"
+   "accent": "standard"
   },
   {
    "n": 2,
-   "name": "Brian - Deep, Resonant and Comforting",
-   "voice_id": "nPczCjzI2devNBz1zQrb",
-   "descriptive": "classy",
+   "name": "Leon Stern - Rich and Deep",
+   "voice_id": "re2r5d74PqDzicySNW0I",
+   "descriptive": "modulated",
    "age": "middle_aged",
-   "accent": "american"
+   "accent": "standard"
+  },
+  {
+   "n": 3,
+   "name": "Thomas Schendel - Authoritative and Calm",
+   "voice_id": "Fghah4fztZORbiKfIGAs",
+   "descriptive": "confident",
+   "age": "middle_aged",
+   "accent": "standard"
   }
  ]
 }
