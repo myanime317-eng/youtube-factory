@@ -1,0 +1,28 @@
+name: Publish
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+  push:
+    paths:
+      - "publish/queue.json"
+permissions:
+  contents: write
+concurrency: publish
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish due items
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/publish.py
+      - name: Save feed
+        run: |
+          git config user.name "firmenfriedhof-robot"
+          git config user.email "robot@users.noreply.github.com"
+          git add publish
+          git commit -m "Publish feed" || echo "nothing"
+          git pull --rebase && git push

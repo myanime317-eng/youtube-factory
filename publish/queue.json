@@ -1,0 +1,5 @@
+[
+ {"id": "sample-1", "at": "2026-11-23T00:00:00Z", "title": "TEST – Firmenfriedhof Upload-Test",
+  "description": "Test für die Upload-Automation. Wird nicht veröffentlicht.\n\nZeile 2 der Beschreibung.",
+  "tags": ["Wirecard", "Firmenfriedhof", "Doku"], "file": "test/sample.mp4"}
+]
