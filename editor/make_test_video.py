@@ -171,9 +171,10 @@ def grade(frame, mood):
 def build_overlays():
     yy, xx = np.mgrid[0:H, 0:W]
     d = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2)
-    vign = np.clip(1.15 - 0.55 * d ** 1.8, 0.35, 1.0)[..., None].astype(np.float32)
+    vign = np.clip(1.10 - 0.35 * d ** 2.2, 0.62, 1.0)[..., None].astype(np.float32)
     rng = np.random.default_rng(1)
-    grains = [rng.normal(0, 9, (H // 2, W // 2, 1)).astype(np.float32).repeat(2, 0).repeat(2, 1) for _ in range(6)]
+    GRAIN = 1.2  # very fine, barely visible: heavy grain looked like noise and wasted bitrate
+    grains = [rng.normal(0, GRAIN, (H, W, 1)).astype(np.float32) for _ in range(4)]
     return vign, grains
 
 
