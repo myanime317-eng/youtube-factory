@@ -1,4 +1,4 @@
-# v2: run after key permissions update
+# v3: new Creator key
 """Build the channel's sound kit with ElevenLabs: sound effects and (if the plan allows) a music bed.
 
 Writes assets/sound/<name>.mp3 and assets/sound/report.json. Existing files are kept, so it only
