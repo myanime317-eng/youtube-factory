@@ -42,8 +42,14 @@ for item in queue:
             print("upload failed", item["id"], e.stderr)
             continue
         url = f"https://github.com/{REPO}/releases/download/{tag}/{name}"
+        if item.get("thumb"):  # thumbnail (JPG under 2 MB) goes in the same release
+            try:
+                sh("gh", "release", "upload", tag, item["thumb"], "-R", REPO, "--clobber")
+                item["thumb_url"] = f"https://github.com/{REPO}/releases/download/{tag}/{os.path.basename(item['thumb'])}"
+            except subprocess.CalledProcessError as e:
+                print("thumbnail upload failed", e.stderr)
     done.append({"id": item["id"], "title": item["title"], "description": item["description"],
-                 "tags": item.get("tags", []), "url": url, "published": now.isoformat()})
+                 "tags": item.get("tags", []), "url": url, "thumb_url": item.get("thumb_url", ""), "published": now.isoformat()})
     print("queued for YouTube:", item["id"], item["title"])
 
 json.dump(done, open(DONE, "w"), ensure_ascii=False, indent=1)
@@ -56,7 +62,8 @@ for d in sorted(done, key=lambda d: d["published"], reverse=True)[:30]:
         f"<item><title>{escape(d['title'])}</title><link>{escape(d['url'])}</link>"
         f"<guid isPermaLink=\"false\">{escape(d['id'])}</guid><pubDate>{pub}</pubDate>"
         f"<description><![CDATA[{d['description']}]]></description>{cats}"
-        f"<enclosure url=\"{escape(d['url'])}\" type=\"video/mp4\" length=\"0\"/></item>")
+        + (f"<enclosure url=\"{escape(d['thumb_url'])}\" type=\"image/jpeg\" length=\"0\"/>" if d.get("thumb_url") else "")
+        + "</item>")
 feed = ("<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\"><channel>"
         "<title>Firmenfriedhof uploads</title><link>https://www.youtube.com/@derfirmenfriedhof</link>"
         "<description>Upload queue</description>" + "".join(items) + "</channel></rss>")
