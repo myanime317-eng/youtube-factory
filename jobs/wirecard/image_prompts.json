@@ -2,7 +2,7 @@
  "flow_out": "jobs/wirecard/flow_img",
  "flow_project": "Firmenfriedhof_Wirecard",
  "aspect_ratio": "16:9",
- "style": "Cinematic documentary film still, shot on 35mm anamorphic lens, shallow depth of field, dramatic low-key lighting, rich deep shadows, teal and amber color grade, subtle film grain, photorealistic, ultra detailed, no logos, no watermark",
+ "style": "Cinematic documentary film still, shot on 35mm anamorphic lens, shallow depth of field, dramatic low-key lighting, rich deep shadows, teal and amber color grade, subtle film grain, photorealistic, ultra detailed, no logos, no watermark, any readable text in the image (documents, screens, signs, newspapers) is in German language",
  "shots": [
   {
    "id": "s001",
@@ -32,7 +32,7 @@
   {
    "id": "s006",
    "line": "l003",
-   "prompt": "A printed letter on a dark desk reading AUDIT OPINION REFUSED, reading glasses beside it"
+   "prompt": "A printed letter on a dark desk reading TESTAT VERWEIGERT, reading glasses beside it"
   },
   {
    "id": "s007",
@@ -322,7 +322,7 @@
   {
    "id": "s064",
    "line": "l034",
-   "prompt": "A tech conference stage with a speaker silhouette backlit by a huge screen reading THE FUTURE OF PAYMENTS, large audience"
+   "prompt": "A tech conference stage with a speaker silhouette backlit by a huge screen reading DIE ZUKUNFT DES BEZAHLENS, large audience"
   },
   {
    "id": "s065",
@@ -357,7 +357,7 @@
   {
    "id": "s071",
    "line": "l038",
-   "prompt": "A stack of critical research reports on a desk, one titled SHORT REPORT with red markings"
+   "prompt": "A stack of critical research reports on a desk, one titled LEERVERKÄUFER-REPORT with red markings"
   },
   {
    "id": "s072",
@@ -377,7 +377,7 @@
   {
    "id": "s075",
    "line": "l040",
-   "prompt": "A corporate press release on a desk with a heading DENIAL, fountain pen beside it"
+   "prompt": "A corporate press release on a desk with a heading DEMENTI, fountain pen beside it"
   },
   {
    "id": "s076",
@@ -547,12 +547,12 @@
   {
    "id": "s109",
    "line": "l059",
-   "prompt": "Two bank confirmation letters on a table, the top one stamped with a large red stamp reading FAKE, magnifying glass, harsh light"
+   "prompt": "Two bank confirmation letters on a table, the top one stamped with a large red stamp reading GEFÄLSCHT, magnifying glass, harsh light"
   },
   {
    "id": "s110",
    "line": "l059",
-   "prompt": "Extreme close-up detail shot from this scene, different angle: Two bank confirmation letters on a table, the top one stamped with a large red stamp reading FAKE, magnifying glass, harsh light"
+   "prompt": "Extreme close-up detail shot from this scene, different angle: Two bank confirmation letters on a table, the top one stamped with a large red stamp reading GEFÄLSCHT, magnifying glass, harsh light"
   },
   {
    "id": "s111",
@@ -697,7 +697,7 @@
   {
    "id": "s139",
    "line": "l076",
-   "prompt": "Close-up of a rubber stamp marked APPROVED being pressed on a document"
+   "prompt": "Close-up of a rubber stamp marked GEPRÜFT being pressed on a document"
   },
   {
    "id": "s140",
