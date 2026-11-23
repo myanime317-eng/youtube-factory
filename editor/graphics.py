@@ -9,9 +9,9 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 W, H = 1920, 1080
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FONTS = "/usr/share/fonts/truetype/google-fonts/ofl/"
-SERIF = FONTS + "cardo/Cardo-Bold.ttf"
-SANS = FONTS + "montserrat/Montserrat[wght].ttf"
+FONTS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "fonts")
+SERIF = os.path.join(FONTS, "Cardo-Bold.ttf")
+SANS = os.path.join(FONTS, "Montserrat[wght].ttf")
 GOLD, WHITE, RED, NAVY = (214, 178, 92), (238, 236, 230), (214, 52, 44), (10, 16, 28)
 GREY = (120, 130, 148)
 
