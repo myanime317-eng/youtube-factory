@@ -5,9 +5,6 @@ on:
       slug:
         description: "job folder name under jobs/"
         required: true
-  push:
-    paths:
-      - "jobs/*/flow_img/DONE"
 permissions:
   contents: write
 concurrency: produce
