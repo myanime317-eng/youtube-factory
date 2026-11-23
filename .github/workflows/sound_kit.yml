@@ -1,0 +1,25 @@
+name: Sound kit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/sound_kit.py"
+permissions:
+  contents: write
+jobs:
+  sound:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make sounds
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/sound_kit.py
+      - name: Save
+        run: |
+          git config user.name "firmenfriedhof-robot"
+          git config user.email "robot@users.noreply.github.com"
+          git add assets/sound
+          git commit -m "Sound kit" || echo "nothing"
+          git pull --rebase && git push
