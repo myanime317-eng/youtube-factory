@@ -107,10 +107,13 @@ async function runJob({ file, spec }) {
   await ensureProject(c);
   const out = join(REPO, spec.flow_out);
   mkdirSync(out, { recursive: true });
-  const shots = spec.shots;
+  // only shots that are not on disk yet (a sleep or crash mid-job must not redraw finished images)
+  const have = new Set(readdirSync(out).map((f) => f.replace(/\.[^.]+$/, "")));
+  const shots = spec.shots.filter((s) => !have.has(s.id));
+  const results = {};
+  for (const s of spec.shots) if (have.has(s.id)) results[s.id] = "flow";
   const style = spec.style ? ` ${spec.style.replace(/\.?$/, ".")}` : "";
   const name = spec.flow_project ?? spec.flow_out.replace(/[^\w]+/g, "_");
-  const results = {};
   const report = [];
   // Flow's agent takes up to 50 scenes per batch.
   for (let start = 0; start < shots.length; start += 40) {
@@ -150,6 +153,12 @@ async function runJob({ file, spec }) {
       copyFileSync(f, join(out, `${s.id}${extname(f).toLowerCase()}`));
       results[s.id] = "flow";
     });
+    try {  // save progress after each batch
+      git("add", spec.flow_out);
+      git("commit", "-m", `Flow images: ${spec.flow_out} (progress)`);
+      git("pull", "--rebase");
+      git("push");
+    } catch (e) { log("progress push skipped:", e.message.slice(0, 120)); }
   }
   const missing = Object.entries(results).filter(([, v]) => v !== "flow").map(([k]) => k);
   writeFileSync(join(out, "log.json"), JSON.stringify({ made: new Date().toISOString(), results, flow_jobs: report }, null, 1));
