@@ -114,3 +114,10 @@ Your branch is up to date with 'origin/main'.
 [2026-11-23T14:50:25.964Z] Flow error (single): The finished file is in Flow but could not be found again in the grid. Nothing is lost: flow_download fetches it by its title without spending credits again.
 [2026-11-23T14:50:25.964Z] Flow error (single): Flow has no "x1" option for the current mode/model.
 [2026-11-23T14:50:26.097Z] Batch: 17/20 images matched
+[2026-11-23T14:51:37.174Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (100 left)
+[2026-11-23T14:57:10.832Z] Flow error: Flow's agent could not run this batch: Flow's tile menu has no Download item. It offered: deleteDelete Nothing was made one by one instead.
+[2026-11-23T14:57:10.833Z] Agent batch gave nothing; making these images one by one.
+[2026-11-23T15:37:31.347Z] Flow error (single): Flow has no "x1" option for the current mode/model.
+[2026-11-23T15:37:31.351Z] Flow error (single): Flow has no "x1" option for the current mode/model.
+[2026-11-23T15:37:31.351Z] Flow error (single): Flow has no "x1" option for the current mode/model.
+[2026-11-23T15:37:31.402Z] Batch: 17/20 images matched
