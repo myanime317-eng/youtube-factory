@@ -57,3 +57,49 @@ Call log:
 [2026-11-23T12:28:21.427Z] Only 0/4 images came back; waiting for Flow, then downloading the newest ones.
 [2026-11-23T12:32:21.434Z] Fallback download failed: Signed in, but no project is open. Open or create a project in the Flow Chrome window.
 [2026-11-23T12:32:21.435Z] Flow error: Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T12:36:06.329Z] Pushed 80 images to jobs/wirecard/flow_img, missing s081,s082,s083,s084,s085,s086,s087,s088,s089,s090,s091,s092,s093,s094,s095,s096,s097,s098,s099,s100,s101,s102,s103,s104,s105,s106,s107,s108,s109,s110,s111,s112,s113,s114,s115,s116,s117,s118,s119,s120,s121,s122,s123,s124,s125,s126,s127,s128,s129,s130,s131,s132,s133,s134,s135,s136,s137,s138,s139,s140,s141,s142,s143,s144,s145,s146,s147,s148,s149,s150,s151,s152,s153,s154,s155,s156,s157,s158,s159,s160,s161,s162,s163,thumb
+[2026-11-23T12:41:07.435Z] Helper code updated, restarting.
+[2026-11-23T12:41:07.788Z] Helper started.
+[2026-11-23T12:41:08.761Z] Running Flow myself.
+[2026-11-23T12:41:15.276Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (164 left)
+[2026-11-23T12:47:25.348Z] Flow error: Flow's agent could not run this batch: Could not switch Agent mode on (locator.click: Timeout 8000ms exceeded.). Nothing was made one by one instead.
+[2026-11-23T12:47:25.349Z] Batch: 0/20 images matched
+[2026-11-23T12:47:29.693Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (144 left)
+[2026-11-23T12:54:30.705Z] Flow error: Flow's agent could not run this batch: Could not switch Agent mode on (locator.click: Timeout 8000ms exceeded.). Nothing was made one by one instead.
+[2026-11-23T12:54:30.706Z] Batch: 0/20 images matched
+[2026-11-23T12:54:30.891Z] progress push skipped: git commit -m Flow images: jobs/wirecard/flow_img (0/164): On branch main
+Your branch is up to date with 'origin/main'.
+
+[2026-11-23T12:54:30.891Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (124 left)
+[2026-11-23T13:01:34.900Z] Flow error: Flow's agent could not run this batch: Could not switch Agent mode on (locator.click: Timeout 8000ms exceeded.). Nothing was made one by one instead.
+[2026-11-23T13:01:34.902Z] Batch: 0/20 images matched
+[2026-11-23T13:01:35.083Z] progress push skipped: git commit -m Flow images: jobs/wirecard/flow_img (0/164): On branch main
+Your branch is up to date with 'origin/main'.
+
+[2026-11-23T13:01:35.084Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (104 left)
+[2026-11-23T13:03:38.342Z] Flow error: Flow's agent could not run this batch: page.waitForTimeout: Target page, context or browser has been closed Nothing was made one by one instead.
+[2026-11-23T13:03:38.343Z] Batch: 0/20 images matched
+[2026-11-23T13:03:38.516Z] progress push skipped: git commit -m Flow images: jobs/wirecard/flow_img (0/164): On branch main
+Your branch is up to date with 'origin/main'.
+
+[2026-11-23T13:03:38.516Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (84 left)
+[2026-11-23T13:04:35.637Z] Flow error: Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T13:04:35.637Z] Batch: 0/20 images matched
+[2026-11-23T13:04:35.795Z] progress push skipped: git commit -m Flow images: jobs/wirecard/flow_img (0/164): On branch main
+Your branch is up to date with 'origin/main'.
+
+[2026-11-23T13:04:35.796Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (64 left)
+[2026-11-23T13:17:58.578Z] Flow error: Flow's agent could not run this batch: locator.scrollIntoViewIfNeeded: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('flow-grid-tile-container:has([data-media-id="3686b655-dfb8-411b-88b1-e0efb5896399"]), flow-grid-tile-container:has([src*="3686b655-dfb8-411b-88b1-e0efb5896399"])').first()[22m
+ Nothing was made one by one instead.
+[2026-11-23T13:17:58.579Z] Batch: 0/20 images matched
+[2026-11-23T13:17:58.745Z] progress push skipped: git commit -m Flow images: jobs/wirecard/flow_img (0/164): On branch main
+Your branch is up to date with 'origin/main'.
+
+[2026-11-23T13:17:58.745Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (44 left)
+[2026-11-23T13:29:30.437Z] Batch: 20/20 images matched
+[2026-11-23T13:30:59.775Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (24 left)
+[2026-11-23T13:41:13.295Z] Batch: 20/20 images matched
+[2026-11-23T13:42:35.370Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 4 images (4 left)
+[2026-11-23T13:47:57.156Z] Batch: 4/4 images matched
