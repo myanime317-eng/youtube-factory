@@ -84,14 +84,14 @@ def main(job):
     sched = sc.get("schedule", {})
     now = dt.datetime.now(dt.timezone.utc)
     ep_at = sched.get("episode") or (now + dt.timedelta(hours=1)).isoformat()
-    q = [{"id": f"{slug}-episode", "at": ep_at, "title": yt["title"], "description": desc, "tags": yt.get("tags", []),
+    q = [{"id": f"{slug}-episode", "hold": True, "at": ep_at, "title": yt["title"], "description": desc, "tags": yt.get("tags", []),
           "asset_url": base + "episode.mp4", "thumb_url": base + "thumb.jpg"}]
     spec = {s["id"]: s for s in sc.get("shorts", [])}
     for n, s in enumerate(shorts):
         meta = spec.get(s["id"], {})
         at = (sched.get("shorts") or [])[n] if n < len(sched.get("shorts") or []) else \
             (dt.datetime.fromisoformat(ep_at.replace("Z", "+00:00")) + dt.timedelta(days=n + 1)).isoformat()
-        q.append({"id": f"{slug}-{s['id']}", "at": at, "title": meta.get("title", s["title"])[:100],
+        q.append({"id": f"{slug}-{s['id']}", "hold": True, "at": at, "title": meta.get("title", s["title"])[:100],
                   "description": (meta.get("description", "") + "\n\nGanze Doku auf dem Kanal: Firmenfriedhof\n\n"
                                   + AI_NOTE + "\n\n#Shorts #Firmenfriedhof").strip(),
                   "tags": meta.get("tags", yt.get("tags", [])), "asset_url": base + os.path.basename(s["file"])})

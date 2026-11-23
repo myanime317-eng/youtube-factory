@@ -23,7 +23,7 @@ def sh(*a):
 
 
 for item in queue:
-    if item["id"] in done_ids:
+    if item["id"] in done_ids or item.get("hold"):  # held items wait for the owner's ok
         continue
     at = dt.datetime.fromisoformat(item["at"].replace("Z", "+00:00"))
     if at > now:
