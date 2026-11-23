@@ -83,6 +83,12 @@ function findJobs() {
       if (name.startsWith(".") || name === "node_modules") continue;
       const p = join(dir, name);
       if (statSync(p).isDirectory()) walk(p, depth + 1);
+      else if (name === "clip_prompts.json") {
+        try {
+          const spec = JSON.parse(readFileSync(p, "utf8"));
+          if (spec.clips_out && !existsSync(join(REPO, spec.clips_out, "DONE"))) jobs.push({ file: p, spec, kind: "clips" });
+        } catch (e) { log("Bad clip job file", p, e.message); }
+      }
       else if (name === "image_prompts.json") {
         try {
           const spec = JSON.parse(readFileSync(p, "utf8"));
@@ -174,6 +180,52 @@ function restartIfUpdated() {
   return true;
 }
 
+
+async function runClips({ file, spec }) {
+  const c = await getCore();
+  await ensureProject(c);
+  const out = join(REPO, spec.clips_out);
+  mkdirSync(out, { recursive: true });
+  const results = {};
+  const report = [];
+  const todo = spec.clips.filter((k) => !existsSync(join(out, `${k.id}.mp4`)));
+  if (!todo.length) { writeFileSync(join(out, "DONE"), new Date().toISOString()); }
+  for (const k of todo) {
+    const first = k.image ? join(REPO, k.image) : undefined;
+    if (first && !existsSync(first)) { results[k.id] = "no start image yet"; continue; }
+    log(`Clip ${k.id}: ${k.prompt.slice(0, 60)}`);
+    const q = await c.generate({
+      project: spec.flow_project ?? spec.clips_out.replace(/[^\w]+/g, "_"),
+      scenes: [{
+        prompt: k.prompt, type: "video", aspect_ratio: "16:9", duration: k.duration ?? 5,
+        resolution: "720p", max_credits: spec.max_credits ?? 20, download_quality: "upscaled",
+        ...(first ? { first_frame: first } : {}),
+      }],
+    });
+    const ids = q.jobs.map((j) => j.id);
+    let done;
+    for (let i = 0; i < 60; i++) { done = await c.wait({ job_ids: ids, timeout_seconds: 300 }); if (done.finished) break; }
+    const j = done.jobs[0];
+    report.push({ id: k.id, status: j.status, error: j.error, note: j.note, credits: j.credits, files: j.files });
+    const f = (j.files ?? []).find((x) => /\.mp4$/i.test(x));
+    if (f) { copyFileSync(f, join(out, `${k.id}.mp4`)); results[k.id] = "flow"; }
+    else results[k.id] = j.error || j.note || j.status;
+    if (/credit/i.test(String(j.error ?? j.note ?? ""))) { log("Out of Flow credits for today; the rest waits for tomorrow."); break; }
+  }
+  const missing = spec.clips.filter((k) => !existsSync(join(out, `${k.id}.mp4`))).map((k) => k.id);
+  writeFileSync(join(out, "log.json"), JSON.stringify({ made: new Date().toISOString(), results, flow_jobs: report }, null, 1));
+  writeFileSync(join(out, "helper_log.txt"), tailLog());
+  if (!missing.length) writeFileSync(join(out, "DONE"), new Date().toISOString());
+  git("add", spec.clips_out);
+  try { git("commit", "-m", `Flow clips: ${spec.clips_out}${missing.length ? ` (waiting: ${missing.join(",")})` : ""}`); } catch {}
+  git("pull", "--rebase");
+  git("push");
+  log(`Clips pushed; waiting: ${missing.join(",") || "none"}`);
+  // Don't hammer Flow when a day's credits are used up: try again in 6 hours.
+  if (missing.length) clipPauseUntil = Date.now() + 6 * 3600 * 1000;
+}
+let clipPauseUntil = 0;
+
 const failures = new Map();
 log("Helper started.");
 for (;;) {
@@ -182,7 +234,8 @@ for (;;) {
     if (restartIfUpdated()) { await sleep(5000); continue; }
     for (const job of findJobs()) {
       if ((failures.get(job.file) ?? 0) >= 3) continue;
-      try { await runJob(job); failures.delete(job.file); }
+      if (job.kind === "clips" && Date.now() < clipPauseUntil) continue;
+      try { await (job.kind === "clips" ? runClips(job) : runJob(job)); failures.delete(job.file); }
       catch (e) { failures.set(job.file, (failures.get(job.file) ?? 0) + 1); log("Job failed:", job.file, e.message); }
     }
   } catch (e) { log("Cycle error:", e.message); }
