@@ -165,6 +165,7 @@ async function runJob({ file, spec }) {
     }
     writeFileSync(mpath, JSON.stringify(manifest, null, 1));
     log(`Batch: ${got}/${part.length} images matched`);
+    writeFileSync(join(out, "helper_log.txt"), tailLog());  // so progress and errors are visible on GitHub
     try {  // save progress after each batch
       git("add", spec.flow_out);
       git("commit", "-m", `Flow images: ${spec.flow_out} (${Object.keys(manifest).length}/${spec.shots.length})`);
