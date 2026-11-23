@@ -296,7 +296,7 @@ def main(img_dir, voice_mp3, align_json, out_mp4):
             if os.path.exists(q):
                 p = q
         imgs[s["id"]] = prep_image(p)
-    title_bg = camera(imgs["s13"], 0.5, "push")
+    title_bg = camera(imgs[by_line["l09"][-1]], 0.5, "push")
 
     # --- text overlays (key words only)
     fmt_mrd = lambda v: f"{v:,.1f}".replace(",", "X").replace(".", ",").replace("X", ".") + " MRD. €"

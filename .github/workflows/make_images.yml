@@ -1,11 +1,6 @@
 name: Make images
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "test/image_prompts.json"
-      - "scripts/make_images.py"
-      - ".github/workflows/make_images.yml"
 permissions:
   contents: write
 jobs:
