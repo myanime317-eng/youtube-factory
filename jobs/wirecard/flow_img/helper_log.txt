@@ -1,20 +1,3 @@
-[2026-11-23T07:45:32.897Z] Helper started.
-[2026-11-23T07:45:35.521Z] Running Flow myself.
-[2026-11-23T07:45:41.841Z] Created Flow project https://flow.google.com/project/0708e60e-ea00-4d39-b408-be03223dffb4
-[2026-11-23T07:45:41.842Z] Job C:\Users\Garv\youtube-factory\test\image_prompts.json: shots 1-20
-[2026-11-23T07:48:18.197Z] Flow error: Flow's agent could not run this batch: locator.click: Timeout 30000ms exceeded.
-Call log:
-[2m  - waiting for locator('flow-grid-tile-container:has([data-media-id="dbd7580a-ed30-4e6f-8dc2-3954e7e9f740"]), flow-grid-tile-container:has([src*="dbd7580a-ed30-4e6f-8dc2-3954e7e9f740"])').first().getByRole('button', { name: 'Reuse prompt' })[22m
-[2m    - locator resolved to <button type="button" flowhotbarbutton="" _nghost-ng-c3691354700="" aria-label="Reuse prompt" class="mat-mdc-tooltip-trigger">…</button>[22m
-[2m  - attempting click action[22m
-[2m    2 × waiting for element to be visible, enabled and stable[22m
-[2m      - element is not stable[22m
-[2m    - retrying click action[22m
-[2m    - waiting 20ms[22m
-[2m    2 × waiting for element to be visible, enabled and stable[22m
-[2m      - element is not stable[22m
-[2m    - retrying click action[22m
-[2m      - waiting 100ms[22m
 [2m    55 × waiting for element to be visible, enabled and stable[22m
 [2m       - element is not visible[22m
 [2m     - retrying click action[22m
@@ -121,3 +104,46 @@ Your branch is up to date with 'origin/main'.
 [2026-11-23T15:37:31.351Z] Flow error (single): Flow has no "x1" option for the current mode/model.
 [2026-11-23T15:37:31.351Z] Flow error (single): Flow has no "x1" option for the current mode/model.
 [2026-11-23T15:37:31.402Z] Batch: 17/20 images matched
+[2026-11-23T15:38:24.054Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (80 left)
+[2026-11-23T15:50:10.568Z] Helper started.
+[2026-11-23T15:50:11.548Z] Running Flow myself.
+[2026-11-23T15:50:11.612Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (86 left)
+[2026-11-23T15:55:54.708Z] Flow error: Flow's agent could not run this batch: Could not switch Agent mode on (locator.click: Timeout 8000ms exceeded.). Nothing was made one by one instead.
+[2026-11-23T15:55:54.708Z] Agent batch gave nothing; making these images one by one.
+[2026-11-23T16:09:39.510Z] Helper started.
+[2026-11-23T16:09:40.483Z] Running Flow myself.
+[2026-11-23T16:09:47.867Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (86 left)
+[2026-11-23T16:10:45.224Z] Flow error: Flow's agent could not run this batch: page.waitForTimeout: Target page, context or browser has been closed Nothing was made one by one instead.
+[2026-11-23T16:10:45.224Z] Agent batch gave nothing; making these images one by one.
+[2026-11-23T16:10:52.539Z] Helper started.
+[2026-11-23T16:10:53.546Z] Running Flow myself.
+[2026-11-23T16:11:05.090Z] Created Flow project https://flow.google.com/project/faf02d7f-5a96-4afb-bd49-7ceb3f63789a
+[2026-11-23T16:11:05.095Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (86 left)
+[2026-11-23T16:12:23.531Z] Flow error: Flow's agent could not run this batch: page.waitForTimeout: Target page, context or browser has been closed Nothing was made one by one instead.
+[2026-11-23T16:12:23.532Z] Agent batch gave nothing; making these images one by one.
+[2026-11-23T16:12:41.587Z] Helper started.
+[2026-11-23T16:12:42.572Z] Running Flow myself.
+[2026-11-23T16:12:49.434Z] Job C:\Users\Garv\youtube-factory\jobs\wirecard\image_prompts.json: 20 images (86 left)
+[2026-11-23T16:16:23.548Z] Flow error: Flow's agent could not run this batch: Could not switch Agent mode on (locator.click: Timeout 8000ms exceeded.). Nothing was made one by one instead.
+[2026-11-23T16:16:23.549Z] Agent batch gave nothing; making these images one by one.
+[2026-11-23T16:32:10.369Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.370Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.370Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.370Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.371Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.371Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.371Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.372Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.372Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.372Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.373Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.373Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.374Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.374Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.375Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.375Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.375Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.376Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.376Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.376Z] Flow error (single): Signed in, but no project is open. Open or create a project in the Flow Chrome window.
+[2026-11-23T16:32:10.377Z] Batch: 0/20 images matched
