@@ -134,7 +134,25 @@ async function runJob({ file, spec }) {
     }
     done.jobs.forEach((j) => j.error && log("Flow error:", j.error));
     report.push(...done.jobs.map((j) => ({ status: j.status, error: j.error, note: j.note, failed_scenes: j.failed_scenes, files: j.files })));
-    const files = done.jobs.flatMap((j) => j.files ?? []).filter((f) => /\.(png|jpe?g|webp)$/i.test(f));
+    let files = done.jobs.flatMap((j) => j.files ?? []).filter((f) => /\.(png|jpe?g|webp)$/i.test(f));
+    if (!files.length) {
+      // Agent mode failed (Flow UI changes): make this batch one image at a time instead (stills cost no credits)
+      log("Agent batch gave nothing; making these images one by one.");
+      const q2 = await c.generate({
+        project: `${name}_single_${Date.now()}`,
+        scenes: part.map((s) => ({ prompt: `${s.prompt.replace(/\.?$/, ".")}${style}`, type: "image",
+          aspect_ratio: spec.aspect_ratio ?? "16:9", max_credits: 0, download_quality: "upscaled" })),
+      });
+      const ids2 = q2.jobs.map((j) => j.id);
+      let d2;
+      for (let i = 0; i < 120; i++) {
+        d2 = await c.wait({ job_ids: ids2, timeout_seconds: 300 });
+        if (d2.finished) break;
+      }
+      d2.jobs.forEach((j) => j.error && log("Flow error (single):", String(j.error).slice(0, 200)));
+      report.push(...d2.jobs.map((j) => ({ single: true, status: j.status, error: j.error, files: j.files })));
+      files = d2.jobs.flatMap((j) => j.files ?? []).filter((f) => /\.(png|jpe?g|webp)$/i.test(f));
+    }
     let got = 0;
     for (const f of files) {
       const m = /scene-(\d+)/.exec(f.split(/[\\/]/).pop());
