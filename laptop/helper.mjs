@@ -122,7 +122,19 @@ async function runJob({ file, spec }) {
       done = await c.wait({ job_ids: ids, timeout_seconds: 300 });
       if (done.finished) break;
     }
-    const files = done.jobs.flatMap((j) => j.files ?? []).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).sort();
+    let files = done.jobs.flatMap((j) => j.files ?? []).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).sort();
+    if (files.length < part.length) {
+      // Flow often keeps drawing after the helper stops watching. Give it time, then fetch the newest images.
+      log(`Only ${files.length}/${part.length} images came back; waiting for Flow, then downloading the newest ones.`);
+      await sleep(4 * 60 * 1000);
+      try {
+        const imgs = (await c.assets({ kind: "image" })).slice(0, part.length).reverse();
+        report.push({ fallback_titles: imgs.map((a) => a.name) });
+        const got = await c.download({ project: `${name}_fallback_${Date.now()}`, assets: imgs.map((a) => a.name), quality: "upscaled" });
+        const fb = (got.files ?? []).filter((f) => /\.(png|jpe?g|webp)$/i.test(f));
+        if (fb.length > files.length) files = fb;
+      } catch (e) { log("Fallback download failed:", e.message); report.push({ fallback_error: e.message }); }
+    }
     done.jobs.forEach((j) => j.error && log("Flow error:", j.error));
     report.push(...done.jobs.map((j) => ({ status: j.status, error: j.error, note: j.note, progress: j.progress, failed_scenes: j.failed_scenes, files: j.files, project: j.project })));
     try { const st = await c.status({ detailed: false }); report.push({ flow_state: st.flow }); } catch (e) { report.push({ status_error: e.message }); }
