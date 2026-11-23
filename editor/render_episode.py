@@ -273,6 +273,11 @@ def _init(job):
 
 
 def find_img(img_dir, sid):
+    mp = os.path.join(img_dir, "manifest.json")
+    if os.path.exists(mp):
+        f = json.load(open(mp)).get(sid)
+        if f and os.path.exists(os.path.join(img_dir, f)):
+            return os.path.join(img_dir, f)
     for ext in (".png", ".jpg", ".jpeg", ".webp"):
         q = os.path.join(img_dir, sid + ext)
         if os.path.exists(q):

@@ -107,68 +107,62 @@ async function runJob({ file, spec }) {
   await ensureProject(c);
   const out = join(REPO, spec.flow_out);
   mkdirSync(out, { recursive: true });
-  // only shots that are not on disk yet (a sleep or crash mid-job must not redraw finished images)
-  const have = new Set(readdirSync(out).map((f) => f.replace(/\.[^.]+$/, "")));
-  const shots = spec.shots.filter((s) => !have.has(s.id));
-  const results = {};
-  for (const s of spec.shots) if (have.has(s.id)) results[s.id] = "flow";
+  // manifest = images this code placed and matched to their scene; anything else in the folder is not trusted
+  const mpath = join(out, "manifest.json");
+  const manifest = existsSync(mpath) ? JSON.parse(readFileSync(mpath, "utf8")) : {};
+  const ok = (id) => manifest[id] && existsSync(join(out, manifest[id]));
+  const shots = spec.shots.filter((s) => !ok(s.id));
   const style = spec.style ? ` ${spec.style.replace(/\.?$/, ".")}` : "";
   const name = spec.flow_project ?? spec.flow_out.replace(/[^\w]+/g, "_");
   const report = [];
-  // Flow's agent takes up to 50 scenes per batch.
-  for (let start = 0; start < shots.length; start += 40) {
-    const part = shots.slice(start, start + 40);
-    log(`Job ${file}: shots ${start + 1}-${start + part.length}`);
+  const BATCH = 20;
+  for (let start = 0; start < shots.length; start += BATCH) {
+    const part = shots.slice(start, start + BATCH);
+    log(`Job ${file}: ${part.length} images (${shots.length - start} left)`);
+    // own folder per batch, so file numbers scene-01.. match this batch's scene order exactly
     const queued = await c.agent({
-      project: name,
+      project: `${name}_${Date.now()}`,
       scenes: part.map((s) => `${s.prompt.replace(/\.?$/, ".")}${style}`),
       aspect_ratio: spec.aspect_ratio ?? "16:9",
       download_quality: "upscaled",
     });
     const ids = queued.jobs.map((j) => j.id);
     let done;
-    for (let i = 0; i < 120; i++) {
+    for (let i = 0; i < 60; i++) {
       done = await c.wait({ job_ids: ids, timeout_seconds: 300 });
       if (done.finished) break;
     }
-    let files = done.jobs.flatMap((j) => j.files ?? []).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).sort();
-    if (files.length < part.length) {
-      // Flow often keeps drawing after the helper stops watching. Give it time, then fetch the newest images.
-      log(`Only ${files.length}/${part.length} images came back; waiting for Flow, then downloading the newest ones.`);
-      await sleep(4 * 60 * 1000);
-      try {
-        const imgs = (await c.assets({ kind: "image" })).slice(0, part.length).reverse();
-        report.push({ fallback_titles: imgs.map((a) => a.name) });
-        const got = await c.download({ project: `${name}_fallback_${Date.now()}`, assets: imgs.map((a) => a.name), quality: "upscaled" });
-        const fb = (got.files ?? []).filter((f) => /\.(png|jpe?g|webp)$/i.test(f));
-        if (fb.length > files.length) files = fb;
-      } catch (e) { log("Fallback download failed:", e.message); report.push({ fallback_error: e.message }); }
-    }
     done.jobs.forEach((j) => j.error && log("Flow error:", j.error));
-    report.push(...done.jobs.map((j) => ({ status: j.status, error: j.error, note: j.note, progress: j.progress, failed_scenes: j.failed_scenes, files: j.files, project: j.project })));
-    try { const st = await c.status({ detailed: false }); report.push({ flow_state: st.flow }); } catch (e) { report.push({ status_error: e.message }); }
-    part.forEach((s, k) => {
-      const f = files[k];
-      if (!f) { results[s.id] = "missing"; return; }
-      copyFileSync(f, join(out, `${s.id}${extname(f).toLowerCase()}`));
-      results[s.id] = "flow";
-    });
+    report.push(...done.jobs.map((j) => ({ status: j.status, error: j.error, note: j.note, failed_scenes: j.failed_scenes, files: j.files })));
+    const files = done.jobs.flatMap((j) => j.files ?? []).filter((f) => /\.(png|jpe?g|webp)$/i.test(f));
+    let got = 0;
+    for (const f of files) {
+      const m = /scene-(\d+)/.exec(f.split(/[\\/]/).pop());
+      const s = m && part[Number(m[1]) - 1];
+      if (!s) continue;
+      const fname = `${s.id}${extname(f).toLowerCase()}`;
+      copyFileSync(f, join(out, fname));
+      manifest[s.id] = fname;
+      got++;
+    }
+    writeFileSync(mpath, JSON.stringify(manifest, null, 1));
+    log(`Batch: ${got}/${part.length} images matched`);
     try {  // save progress after each batch
       git("add", spec.flow_out);
-      git("commit", "-m", `Flow images: ${spec.flow_out} (progress)`);
+      git("commit", "-m", `Flow images: ${spec.flow_out} (${Object.keys(manifest).length}/${spec.shots.length})`);
       git("pull", "--rebase");
       git("push");
     } catch (e) { log("progress push skipped:", e.message.slice(0, 120)); }
   }
-  const missing = Object.entries(results).filter(([, v]) => v !== "flow").map(([k]) => k);
-  writeFileSync(join(out, "log.json"), JSON.stringify({ made: new Date().toISOString(), results, flow_jobs: report }, null, 1));
+  const missing = spec.shots.filter((s) => !ok(s.id)).map((s) => s.id);
+  writeFileSync(join(out, "log.json"), JSON.stringify({ made: new Date().toISOString(), missing, flow_jobs: report }, null, 1));
   writeFileSync(join(out, "helper_log.txt"), tailLog());
   if (!missing.length) writeFileSync(join(out, "DONE"), new Date().toISOString());
   git("add", spec.flow_out);
-  try { git("commit", "-m", `Flow images: ${spec.flow_out}${missing.length ? ` (missing ${missing.join(",")})` : ""}`); } catch {}
+  try { git("commit", "-m", `Flow images: ${spec.flow_out}${missing.length ? ` (${missing.length} still missing, retrying next round)` : " DONE"}`); } catch {}
   git("pull", "--rebase");
   git("push");
-  log(`Pushed ${Object.keys(results).length - missing.length} images to ${spec.flow_out}` + (missing.length ? `, missing ${missing}` : ""));
+  log(`Images: ${spec.shots.length - missing.length}/${spec.shots.length}` + (missing.length ? `, missing ${missing.join(",")}` : ""));
 }
 
 function tailLog() {

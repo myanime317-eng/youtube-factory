@@ -26,6 +26,14 @@ def main(job):
     job = os.path.abspath(job)
     slug = os.path.basename(job)
     sc = json.load(open(os.path.join(job, "script.json")))
+    # only render when every image was matched to its scene by the laptop helper
+    ip = json.load(open(os.path.join(job, "image_prompts.json")))
+    mp = os.path.join(job, "flow_img", "manifest.json")
+    man = json.load(open(mp)) if os.path.exists(mp) else {}
+    missing = [x["id"] for x in ip["shots"] if x["id"] not in man]
+    if missing:
+        print(f"not ready: {len(missing)} images not confirmed yet ({missing[:5]}...)")
+        return
     out = os.path.join(job, "out")
     os.makedirs(out, exist_ok=True)
 
