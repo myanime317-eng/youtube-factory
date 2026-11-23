@@ -1,0 +1,14 @@
+[
+ {
+  "id": "sample-1",
+  "title": "TEST – Firmenfriedhof Upload-Test",
+  "description": "Test für die Upload-Automation. Wird nicht veröffentlicht.\n\nZeile 2 der Beschreibung.",
+  "tags": [
+   "Wirecard",
+   "Firmenfriedhof",
+   "Doku"
+  ],
+  "url": "https://github.com/myanime317-eng/youtube-factory/releases/download/sample-1/sample.mp4",
+  "published": "2026-11-23T10:31:45.654056+00:00"
+ }
+]
