@@ -24,7 +24,7 @@ Audience: German-speaking (DE/AT/CH). Voice: Alexander (ElevenLabs v3, emotion t
 
 ## Pictures
 - About one shot every 3 seconds: 1–4 shots per line, ~200–240 image shots per episode plus 12–20 graphics.
-- Image prompt rules: cinematic documentary stills; no logos or real brand marks unless essential text like a headline; **no real people's faces** (only from behind, silhouettes, hands, crowds); German settings (cities, offices, Autobahn, Plattenbau, Fußgängerzone) where it fits; text inside the image is allowed for headlines, signs, documents ("WIRECARD PLEITE").
+- Image prompt rules: cinematic documentary stills; any words written inside an image must be German (TESTAT VERWEIGERT, not AUDIT OPINION REFUSED); no logos or real brand marks unless essential text like a headline; **no real people's faces** (only from behind, silhouettes, hands, crowds); German settings (cities, offices, Autobahn, Plattenbau, Fußgängerzone) where it fits; text inside the image is allowed for headlines, signs, documents ("WIRECARD PLEITE").
 - Vary shot types: aerial, wide, close-up, detail, hands, documents, screens, symbolic (empty vault, crumbling sign).
 - Graphics (inline in `shots`, use them for every key number/place/person):
   - `{"graphic":"chart","label":"Aktienkurs X (EUR)","mode":"rise|crash|full","points":[["2014",31],["",36],...],"peak":10,"peak_label":"SEP 2018","drop_label":"−99 %","unit":"€"}`
@@ -57,7 +57,7 @@ Title rules: 45–70 characters, company name first, curiosity + keyword ("Aufst
 ## image_prompts.json
 ```json
 {"flow_out":"jobs/<slug>/flow_img","flow_project":"Firmenfriedhof_<Slug>","aspect_ratio":"16:9",
- "style":"Cinematic documentary film still, shot on 35mm anamorphic lens, shallow depth of field, dramatic low-key lighting, rich deep shadows, teal and amber color grade, subtle film grain, photorealistic, ultra detailed, no logos, no watermark",
+ "style":"Cinematic documentary film still, shot on 35mm anamorphic lens, shallow depth of field, dramatic low-key lighting, rich deep shadows, teal and amber color grade, subtle film grain, photorealistic, ultra detailed, no logos, no watermark, any readable text in the image (documents, screens, signs, newspapers) is in German language",
  "shots":[{"id":"s001","line":"l001","prompt":"…"}, …,
           {"id":"thumb","line":"l001","prompt":"YouTube thumbnail background in the style of RealLifeLore: <scene>, the <subject> highlighted in solid translucent red with a thick white outline, a thick white curved arrow pointing at it, bright saturated colors, high contrast, empty space bottom left for text, no text"}]}
 ```
