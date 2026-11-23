@@ -1,3 +1,4 @@
+# v2: run after key permissions update
 """Build the channel's sound kit with ElevenLabs: sound effects and (if the plan allows) a music bed.
 
 Writes assets/sound/<name>.mp3 and assets/sound/report.json. Existing files are kept, so it only
