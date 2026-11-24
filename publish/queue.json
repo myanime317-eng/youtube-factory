@@ -18,8 +18,7 @@
    "Firmenfriedhof"
   ],
   "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/episode.mp4",
-  "thumb_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/thumb.jpg",
-  "hold": true
+  "thumb_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/thumb.jpg"
  },
  {
   "id": "wirecard-short1",
@@ -31,8 +30,7 @@
    "Skandal",
    "Shorts"
   ],
-  "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/short1.mp4",
-  "hold": true
+  "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/short1.mp4"
  },
  {
   "id": "wirecard-short2",
@@ -44,8 +42,7 @@
    "BaFin",
    "Shorts"
   ],
-  "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/short2.mp4",
-  "hold": true
+  "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/short2.mp4"
  },
  {
   "id": "wirecard-short3",
@@ -57,8 +54,7 @@
    "Betrug",
    "Shorts"
   ],
-  "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/short3.mp4",
-  "hold": true
+  "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/short3.mp4"
  },
  {
   "id": "wirecard-short4",
@@ -70,8 +66,7 @@
    "Wirecard",
    "Shorts"
   ],
-  "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/short4.mp4",
-  "hold": true
+  "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/short4.mp4"
  },
  {
   "id": "wirecard-short5",
@@ -83,7 +78,6 @@
    "DAX",
    "Shorts"
   ],
-  "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/short5.mp4",
-  "hold": true
+  "asset_url": "https://github.com/myanime317-eng/youtube-factory/releases/download/ep-wirecard/short5.mp4"
  }
 ]
